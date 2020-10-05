@@ -1,0 +1,26 @@
+body {
+	margin: 5% 8% 5% 8%;
+	background-color: rgb(255, 255, 255);
+	color: Black;
+}
+h1 {
+	background-image: url("../images/staff.JPG");
+	background-position: right center;
+	/*background-color: Black;*/
+	padding: 10% 5% 10% 5%;
+	color: White;
+	text-align: center;
+}
+fieldset{
+	background-color: rgb(220, 220, 220);
+	font-family: Verdana;
+	font-size: 14px;
+}
+legend {
+	font-family: Arial;
+	font-size: 24px;
+	font-weight: bold;
+}
+input {
+	margin: 2px;
+}
