@@ -32,3 +32,13 @@ Vision:
 "To have a secure full stack web app presentable to Camp Carefree using the time alloted by the S-STEM team meetings"
 
 --
+
+Ethan --
+Mission:
+  "To help Camp Carefree save time, money, and headache."
+  
+Vision:
+  "To create a new online process that facilitates their application and information retrieval process for the directors and nurses of CCF."
+ 
+--
+
