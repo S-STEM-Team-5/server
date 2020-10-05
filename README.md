@@ -40,5 +40,9 @@ Mission:
 Vision:
   "To create a new online process that facilitates their application and information retrieval process for the directors and nurses of CCF."
  
---
+Kevin --
+Mission:
+  "Building a useful Web Applicationfor Cam Carefree"
+Vision:
+  "Working with a focused, efective team dynamic that can work on other projects beyond this"
 
