@@ -15,3 +15,11 @@ Goals (End of Nov. 2020):
 > Communicating Form Data from Frontend to Backend Database
 > 
 > 
+
+Bryan --
+
+Mission: To save time, money, and resources in CFC's application process.
+
+Vision: To use some of the most relevant technologies to build and deliver full-stack web app.
+
+--
