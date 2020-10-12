@@ -1,67 +1,56 @@
 body {
-	background-color: #FFF;
-	color: Black;
-}
-h1 {
-	background-image: url("../images/staff.JPG");
-	background-position: center;
-	background-repeat: no-repeat;
-	padding: 10% 5% 10% 5%;
-	color: White;
-	text-align: center;
-}
-form{
-	margin: 0% 8% 5% 8%;
-  display: grid;
-  grid-template-areas:
-  'main main main main right'
-  'week week week week week'
-  'back back back back back'
-  'cert cert cert cert cert'
-  'sign sign sign sign sign'
-  'sub sub sub sub sub';
-  grid-gap: 10px;
-}
-fieldset{
-	background-color: rgb(220, 220, 220);
-	font-family: Verdana;
-	font-size: 14px;
-}
-#logoFig{
-	grid-area: right;
-}
-#logoFig figcaption{
-	margin-left: 30px;
-	text-align: left;
-}
-#submitButton {
-	grid-area: sub;
-}
-#weeksApplication{
-	grid-area: week;
-}
-#mainApplication{
-	grid-area: main;
-}
-#backgroundCheck{
-	grid-area: back;
-}
-#certificationField{
-	grid-area: cert;
-}
-#signatureField{
-	grid-area: sign;
+  background-color: #FFF;
+  color: Black;
 }
 
-legend {
-	font-family: Arial;
-	font-size: 24px;
-	font-weight: bold;
+h1 {
+  background-image: url("../images/staff.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10% 5% 10% 5%;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 0.056129em;
+  color: White;
+  text-align: center;
 }
-input {
-	margin: 2px;
+
+form {
+  margin: 0% 8% 5% 8%;
+  display: grid;
+  grid-template-areas:
+    'main main main main right'
+    'week week week week week'
+    'back back back back back'
+    'sub sub sub sub sub';
+  grid-gap: 10px;
 }
-#banner-wrapper{
-	float: left;
-	margin-left: 6%;
+
+#logoFig {
+  grid-area: right;
+}
+
+#logoFig figcaption {
+  margin-left: 30px;
+  text-align: left;
+}
+
+#submitButton {
+  grid-area: sub;
+}
+
+#weeksApplication {
+  grid-area: week;
+}
+
+#mainApplication {
+  grid-area: main;
+}
+
+#backgroundCheck {
+  grid-area: back;
+}
+
+#banner-wrapper {
+  float: left;
+  margin-left: 6%;
 }
