@@ -1,0 +1,29 @@
+body {
+	background-color: #FFF;
+	color: Black;
+}
+nav{
+	margin: 1em 0em 1em 0em;
+	padding:  1em 0em 1em 0em;
+}
+nav ul a {
+	color: gray;
+	padding: 1em;
+	font-family: Arial;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.6em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+nav ul li{
+	list-style-type: none;
+	display: inline;
+}
+#donate{
+	color: red;
+}
+#banner-wrapper{
+	float: left;
+	margin-left: 6%;
+}

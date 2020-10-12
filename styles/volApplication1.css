@@ -1,21 +1,58 @@
 body {
-	margin: 5% 8% 5% 8%;
-	background-color: rgb(255, 255, 255);
+	background-color: #FFF;
 	color: Black;
 }
 h1 {
 	background-image: url("../images/staff.JPG");
-	background-position: right center;
-	/*background-color: Black;*/
+	background-position: center;
+	background-repeat: no-repeat;
 	padding: 10% 5% 10% 5%;
 	color: White;
 	text-align: center;
+}
+form{
+	margin: 0% 8% 5% 8%;
+  display: grid;
+  grid-template-areas:
+  'main main main main right'
+  'week week week week week'
+  'back back back back back'
+  'cert cert cert cert cert'
+  'sign sign sign sign sign'
+  'sub sub sub sub sub';
+  grid-gap: 10px;
 }
 fieldset{
 	background-color: rgb(220, 220, 220);
 	font-family: Verdana;
 	font-size: 14px;
 }
+#logoFig{
+	grid-area: right;
+}
+#logoFig figcaption{
+	margin-left: 30px;
+	text-align: left;
+}
+#submitButton {
+	grid-area: sub;
+}
+#weeksApplication{
+	grid-area: week;
+}
+#mainApplication{
+	grid-area: main;
+}
+#backgroundCheck{
+	grid-area: back;
+}
+#certificationField{
+	grid-area: cert;
+}
+#signatureField{
+	grid-area: sign;
+}
+
 legend {
 	font-family: Arial;
 	font-size: 24px;
@@ -23,4 +60,8 @@ legend {
 }
 input {
 	margin: 2px;
+}
+#banner-wrapper{
+	float: left;
+	margin-left: 6%;
 }

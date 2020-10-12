@@ -1,18 +1,46 @@
 <!doctype html>
 <html lang="en">
 <head>
-   <meta charset="utf-8">
-   <title>Volunteer Application</title>
-   <link href="../styles/volApplication1.css" type="text/css" rel="stylesheet"/>
+	<meta charset="utf-8">
+	<title>Volunteer Application</title>
+	<link href="../styles/navigation.css" type="text/css" rel="stylesheet"/>
+	<link href="../styles/volApplication1.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
+
+	<!-- Navigation Panel -->
+	
+	<div id="navigation-top">
+			<div id="banner-wrapper" data-content-field="site-title">
+				<a href="/"><img id="banner" src="../images/logo.png" alt="Camp Carefree"></a>
+			</div>
+			<nav id="main-navigation" class="main-nav" data-content-field="navigation">
+				<ul>
+					<li class="page-collection"><a href="http://www.campcarefree.org/about-us">About</a><span class="delimiter"></span></li>
+					<li class="page-collection"><a href="http://www.campcarefree.org/campers">Campers</a><span class="delimiter"></span></li>
+					<li class="page-collection"><a href="http://www.campcarefree.org/thanks">Supporters</a><span class="delimiter"></span></li>
+					<li class="blog-collection"><a href="http://www.campcarefree.org/blog">Blog</a><span class="delimiter"></span></li>
+					<li class="page-collection"><a href="http://www.campcarefree.org/store">Store</a><span class="delimiter"></span></li>
+					<li class="page-collection"><a href="http://www.campcarefree.org/help" id="donate">Donate</a><span class="delimiter"></span></li>
+					<li class="page-collection"><a href="http://www.campcarefree.org/contact">Contact</a><span class="delimiter"></span></li>
+				</ul>
+			</nav>
+	</div>
+	
+	<!------------------------>
+	
 	<h1> Volunteer Staff Application </h1>
 	<hr />
 	<form action="" method="get">
-		<figure>
-			<img src="../images/LogoFull.png" width="260" height="202" align="right"/>
-			<figcaption></figcaption>
+		<figure id="logoFig">
+			<img src="../images/logoFull.png" width="300" height="242"/>
+			<figcaption>275 Carefree Lane<br/>Stokesdale, N.C. 27357<br />336-427-0966</figcaption>
 		</figure>
+
+		<!---------------------------->
+		<!-- 	Main Application    -->
+		<!---------------------------->
+		
 		<fieldset id="mainApplication">
 			<legend> Main Application </legend>
 			<br />
@@ -62,14 +90,70 @@
 			<input type="text" name="school" id="school" size="48"/>
 			<br /><br />
 			<label for="shirt"> T-Shirt Size: </label>
-			<input type="radio" name="shirt" id="small" value="s" />
+			<input type="radio" name="shirt" id="small" value="s" required="required" />
 			<label for="small"> Small </label>
-			<input type="radio" name="shirt" id="medium" value="m"/>
+			<input type="radio" name="shirt" id="medium" value="m" required="required"/>
 			<label for="medium"> Medium </label>
-			<input type="radio" name="shirt" id="large" value="l"/>
+			<input type="radio" name="shirt" id="large" value="l" required="required"/>
 			<label for="large"> Large </label>
 			<br /><br />	
 		</fieldset>
+	
+		<!------------------------------>
+		<!-- 	Weeks availability    -->
+		<!------------------------------>
+		
+		<fieldset id="weeksApplication">
+			<legend> Weeks </legend>
+			<label for="weeks"> 2020 Weeks you are available to work (Please select the week(s) you are available) </label>
+			<br />
+			<input type="checkbox" name="weeks" id="session1" value="1" required="required" />
+			<label for="session1"> SIBLINGS - Well childern with a chronically ill sibling </label>
+			<br />
+			<input type="checkbox" name="weeks" id="session2" value="2" required="required"/>
+			<label for="session2"> NEURO* - epilepsy &amp; neurological disorders </label>
+			<br />
+			<input type="checkbox" name="weeks" id="session3" value="3" required="required"/>
+			<label for="session3"> CANCER - leukemia &amp; other cancers, JRA </label>
+			<br />
+			<input type="checkbox" name="weeks" id="session4" value="4" required="required" />
+			<label for="session4"> SPINA BIFDA* - spina cord disorders &amp; injuries </label>
+			<br />
+			<input type="checkbox" name="weeks" id="session5" value="5" required="required"/>
+			<label for="session5"> KIDS - well childern with a chronically ill parent</label>
+			<br />
+			<input type="checkbox" name="weeks" id="session6" value="6" required="required"/>
+			<label for="session6"> HEMOPHILIA - blood disorders, Von Willebrand &amp; Turner's </label>
+			<p><i>*Please note: These weeks involve helping with campers' personal hygiene, meals, mobility, etc.</i><p>
+			<br />			
+			<label for="car"> Will you be bringing a car to camp? </label>
+			<br />
+			<input type="radio" name="car" id="carNo" value="n" required="required" />
+			<label for="carNo"> No </label>
+			<input type="radio" name="car" id="carYes" value="y" required="required"/>
+			<label for="carYes"> Yes </label>
+			<p>Note: CITs (under 18) may <b>NOT</b> bring cars to camp. Make arrangments to leave by 
+				NOON on Saturday.</p>
+			<br />
+			<label for="returing"> Have you worked at Camp Carefree? </label>
+			<br />
+			<input type="radio" name="returning" id="returnYes" value="y" required="required" />
+			<label for="returnYes"> Yes </label>
+			<input type="radio" name="returning" id="returnNo" value="n" required="required"/>
+			<label for="returnNo"> No </label>
+			<br />
+			<label for="returingCamper"> Have you ever been a Camper at Camp Carefree? </label>
+			<br />
+			<input type="radio" name="returningCamper" id="returnCamperYes" value="y" required="required" />
+			<label for="returnCamperYes"> Yes </label>
+			<input type="radio" name="returningCamper" id="returnCamperNo" value="n" required="required"/>
+			<label for="returnCamperNo"> No </label>
+		</fieldset>
+		
+		<!----------------------------->
+		<!-- 	Background Check     -->
+		<!----------------------------->
+		
 		<fieldset id="backgroundCheck">
 			<legend> Background Check Info </legend>
 			<p> For the safety of our campers, as well as our staff, we will be conductng 
@@ -108,12 +192,12 @@
 			<br />
 			
 			<label for="gender"> Gender: </label>
-			<input type="radio" name="gender" id="female" value="f" />
-			<label for="female"> Female </label>
-			<input type="radio" name="gender" id="male" value="m"/>
-			<label for="male"> Male </label>
-			<input type="radio" name="gender" id="other" value="o"/>
-			<label for="other"> Other </label>
+			<input type="radio" name="gender" id="female2" value="f" />
+			<label for="female2"> Female </label>
+			<input type="radio" name="gender" id="male2" value="m"/>
+			<label for="male2"> Male </label>
+			<input type="radio" name="gender" id="other2" value="o"/>
+			<label for="other2"> Other </label>
 			<br />
 			
 			<label for="ssn"> Social Security Number: </label>
@@ -139,13 +223,90 @@
 			<label for="email"> Email: </label>
 				<input type="email" name="email" id="email" 
 				required="required" size="36"/>
+			<br /><br />
+			<label for="crime"> Have you ever been accused of improper sexual conduct, child abuse,
+				drug or alcohol abuse, a felony, or any other crime? </label>
 			<br />
-			
+			<input type="radio" name="crime" id="crimeNo" value="n" required="required" />
+			<label for="crimeNo"> No </label>
+			<input type="radio" name="crime" id="crimeYes" value="y" required="required"/>
+			<label for="crimeYes"> Yes </label>
+			<br />
+			<label for="comments"> If yes please explain: </label>
+			<br />
+			<textarea name="comments" cols="50" rows="4" placeholder="Explain..."></textarea>
 		</fieldset>
-		<fieldset>
 		
+		<!------------------------------>
+		<!--	Certifications?	      -->
+		<!------------------------------>
+		
+		<fieldset id="certificationField">
+			<legend>Certifications</legend>
+			<label for="certification"> Please check any certifications you have.</label>
+			<br />
+			<br />
+			<input type="checkbox" name="certification" id="lifeguard" value="lifeguard"/>
+			<label for="lifeguard"> Certified Lifeguard </label>
+			<br />
+			<input type="checkbox" name="certification" id="firstAid" value="firstAid"/>
+			<label for="firstAid"> First Aid Certification </label>
+			<br />
+			<input type="checkbox" name="certification" id="waterSafety" value="waterSafety"/>
+			<label for="waterSafety"> Water Safety instructor </label>
+			<br />
+			<input type="checkbox" name="certification" id="acaCampcraft" value="acaCampcraft"/>
+			<label for="acaCampcraft"> ACA Campcraft Course </label>
+			<br />
+			<input type="checkbox" name="certification" id="registeredNurse" value="registeredNurse"/>
+			<label for="registeredNurse"> Registered Nurse </label>
+			<br />
+			<input type="checkbox" name="certification" id="licensedNurse" value="licenseNurse"/>
+			<label for="licensedNurse"> Licensed Practical Nurse </label>
 		</fieldset>
-		<input type="submit" name="Send Message"/>
+		
+		<!------------------------------>
+		<!--	Signature Page        -->
+		<!------------------------------>
+		
+		<fieldset id="signatureField">
+			<legend>Signature</legend>
+			<p><i>You pledge:</i></p>
+			<p><b>
+				I have completed this application truthfully to the best of my knowledge and ability. I have
+				read the list of staff expectations and by my signature, I agree to abide by camp policies
+				during the time I am at Camp Carefree. I give permission to Camp Carefree to provide medical
+				care, and to transport me to the nearest medical facility in case of an emergency.
+			</p></b>
+			<label for="signature"> Signature: </label>
+			<input type="text" name="signature" id="signature" size="18" required="required"/>
+			<p>If you are under 18, a parent or guardian must sign: 
+				<i> This child has permission to leave camp premises with an adult if needed.</i>
+			</p>
+			<label for="parentName"> Name: </label>
+			<input type="text" name="parentName" id="parentName" size="18" required="required"/>
+			<br />
+			<label for="relationToApplicant"> Relation To Applicant: </label>
+			<input type="text" name="relationToApplicant" id="relationToApplicant" size="18"/>
+			<br />
+			<label for="parentSignature"> Signature: </label>
+			<input type="text" name="parentSignature" id="parentSignature" size="18"/>
+		</fieldset>
+		
+		<!------------------------------>
+		<!--	Personal References1  -->
+		<!------------------------------>
+		
+		<!------------------------------>
+		<!--	Personal References2  -->
+		<!------------------------------>
+		
+		<!------------------------------>
+		<!--	Medical Information   -->
+		<!------------------------------>
+		
+		<input id="submitButton" type="submit" name="Send Message"/>
 	</form>
+	<hr />
 </body>
 </html>
