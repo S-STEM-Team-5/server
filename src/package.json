@@ -1,0 +1,30 @@
+{
+  "name": "camp-carefree",
+  "version": "1.0.0",
+  "description": "web html server for camp carefree",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S-STEM-Team-5/server.git"
+  },
+  "keywords": [
+    "mongo",
+    "html",
+    "server",
+    "MERN"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/S-STEM-Team-5/server/issues"
+  },
+  "homepage": "https://github.com/S-STEM-Team-5/server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.8",
+    "react": "^16.13.1"
+  }
+}
