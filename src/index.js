@@ -6,3 +6,7 @@ const path = require('path');
 const app = express();
 app.listen(`3002`);
 app.use('/', express.static(path.resolve('./htmls')));
+
+app.get('/test', function (req, res) {
+    res.send('hello world')
+  })
