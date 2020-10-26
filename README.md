@@ -11,10 +11,10 @@ Clear KPI & Goal Setting
 
 Goals (End of Nov. 2020):
 > Using a Testing Framework
+
 > Using Travis-CI for continous integration
-> Communicating Form Data from Frontend to Backend Database
-> 
-> 
+
+> Communicating Form Data from Frontend to Backend Database 
 
 Bryan --
 
