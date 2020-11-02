@@ -3,17 +3,23 @@ body {
 	color: Black;
 }
 h1 {
-	background-image: url("../images/staff.JPG");
 	background-position: center;
 	background-repeat: no-repeat;
 	padding: 10% 5% 10% 5%;
 	color: White;
 	text-align: center;
 }
+#volH1{
+	background-image: url("../media/staff.JPG");
+}
+#campH1{
+	background-image: url("../media/camper.JPG");
+}
 form{
 	margin: 0% 8% 5% 8%;
   display: grid;
   grid-template-areas:
+  'disc disc disc disc disc'
   'main main main main right'
   'week week week week week'
   'back back back back back'
@@ -37,8 +43,14 @@ fieldset{
 #submitButton {
 	grid-area: sub;
 }
+#discriptionApplication{
+	grid-area: disc;
+}
 #weeksApplication{
 	grid-area: week;
+}
+#camperInfoApplication{
+	grid-area: back;
 }
 #mainApplication{
 	grid-area: main;
