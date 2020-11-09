@@ -51,8 +51,3 @@ db.once('open', function() {
 	//Query by name
 	Kitten.find({name: /^fluff/ }, callback);
 });
-
-
-
-
-
