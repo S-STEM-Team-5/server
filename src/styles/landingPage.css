@@ -1,12 +1,17 @@
+@font-face {   
+    src: url("../fonts/Raleway/static/Raleway-Thin.ttf");
+	font-family: Raleway;
+}
 body {
 	background-color: #FFF;
 	color: Black;
+	margin: 8px 0px 8px 0px;
 }
 h1 {
 	background: gray url("../media/CampFire.JPG") no-repeat center;
 	background-size: cover;
 	max-height: 477px;
-	padding: 10% 5% 10% 5%;
+	padding: 10% 0% 10% 0%;
 	text-align: center;
 	letter-spacing: 0.016129em;
 	font-family: Raleway;
