@@ -1,11 +1,21 @@
 @font-face {   
     src: url("../fonts/Raleway/static/Raleway-Thin.ttf");
+	font-family: RalewayThin;
+}
+@font-face {
+	src: url("../fonts/Raleway/Raleway-VariableFont_wght.ttf");
 	font-family: Raleway;
 }
 body {
 	background-color: #FFF;
 	color: Black;
 	margin: 8px 0px 8px 0px;
+	font-family: Raleway;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0px;
+    line-height: 1.6em;
 }
 #volH1{
 	background: gray url("../media/staff.png") no-repeat center;
@@ -24,7 +34,7 @@ h1 {
 	vertical-align: middle;
 	text-align: center;
 	letter-spacing: 0.016129em;
-	font-family: Raleway;
+	font-family: RalewayThin;
     font-size: 62px;
     font-weight: 100;
 	font-style: normal;
@@ -46,8 +56,6 @@ form{
 }
 fieldset{
 	background-color: rgb(220, 220, 220);
-	font-family: Verdana;
-	font-size: 14px;
 }
 #logoFig{
 	grid-area: right;
@@ -82,9 +90,11 @@ fieldset{
 }
 
 legend {
-	font-family: Arial;
-	font-size: 24px;
+	font-size: 32px;
 	font-weight: bold;
+	background-color: rgb(220, 220, 220);
+	padding: 3px 3px 3px 3px;
+	border: 2px solid threedface;
 }
 input {
 	margin: 2px;
