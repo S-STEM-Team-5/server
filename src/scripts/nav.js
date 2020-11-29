@@ -79,11 +79,12 @@ function initNav(){
 		linkContact.innerHTML = 'Contact';
 		liContact.appendChild(linkContact);
 		ul.appendChild(liContact);
+	//Appends
 	mainNavigation.appendChild(ul);
 	mainNavigation.style.margin = "1em 0em 1em 0em";
 	mainNavigation.style.padding = "1em 0em 1em 0em";
 	navigationTop.appendChild(mainNavigation);
-	//Some Styles
+	//Some Styles 
 	$('nav ul a').css('color', 'gray').css('padding', '1em').css('font-family', 'Arial');
 	$('nav ul a').css('font-size', '14px').css('letter-spacing', '1px').css('line-height', '1.6em');
 	$('nav ul a').css('text-decoration', 'none').css('text-transform', 'uppercase');
