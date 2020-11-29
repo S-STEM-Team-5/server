@@ -1,0 +1,79 @@
+body {
+	background-color: #FFF;
+	color: Black;
+}
+h1 {
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 10% 5% 10% 5%;
+	color: White;
+	text-align: center;
+}
+article{
+	background: url("../media/CampFire.JPG") center;
+}
+#campH1{
+	background-image: url("../media/camper.JPG");
+}
+form{
+	margin: 0% 8% 5% 8%;
+  display: grid;
+  grid-template-areas:
+  'disc disc disc disc disc'
+  'main main main main right'
+  'week week week week week'
+  'back back back back back'
+  'cert cert cert cert cert'
+  'sign sign sign sign sign'
+  'sub sub sub sub sub';
+  grid-gap: 10px;
+}
+fieldset{
+	background-color: rgb(220, 220, 220);
+	font-family: Verdana;
+	font-size: 14px;
+}
+#logoFig{
+	grid-area: right;
+}
+#logoFig figcaption{
+	margin-left: 30px;
+	text-align: left;
+}
+#submitButton {
+	grid-area: sub;
+}
+#discriptionApplication{
+	grid-area: disc;
+}
+#weeksApplication{
+	grid-area: week;
+}
+#camperInfoApplication{
+	grid-area: back;
+}
+#mainApplication{
+	grid-area: main;
+}
+#backgroundCheck{
+	grid-area: back;
+}
+#certificationField{
+	grid-area: cert;
+}
+#signatureField{
+	grid-area: sign;
+}
+
+legend {
+	font-family: Arial;
+	font-size: 24px;
+	font-weight: bold;
+}
+input {
+	margin: 2px;
+}
+#banner-wrapper{
+	float: left;
+	margin-left: 6%;
+}
