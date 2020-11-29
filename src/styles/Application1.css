@@ -1,19 +1,35 @@
+@font-face {   
+    src: url("../fonts/Raleway/static/Raleway-Thin.ttf");
+	font-family: Raleway;
+}
 body {
 	background-color: #FFF;
 	color: Black;
-}
-h1 {
-	background-position: center;
-	background-repeat: no-repeat;
-	padding: 10% 5% 10% 5%;
-	color: White;
-	text-align: center;
+	margin: 8px 0px 8px 0px;
 }
 #volH1{
-	background-image: url("../media/staff.JPG");
+	background: gray url("../media/staff.png") no-repeat center;
+	background-size: cover;
 }
 #campH1{
-	background-image: url("../media/camper.JPG");
+	background: gray url("../media/ToTheLake.png") no-repeat center;
+	background-size: cover;
+}
+h1 {
+	background-size: cover;
+	margin: 20px 0px 20px 0px;
+	line-height: 20px;
+	padding: 228.5px 0px 228.5px 0px;
+	height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	letter-spacing: 0.016129em;
+	font-family: Raleway;
+    font-size: 62px;
+    font-weight: 100;
+	font-style: normal;
+	text-transform: none;
+    color: #fff;
 }
 form{
 	margin: 0% 8% 5% 8%;

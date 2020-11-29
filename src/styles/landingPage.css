@@ -10,8 +10,11 @@ body {
 h1 {
 	background: gray url("../media/CampFire.JPG") no-repeat center;
 	background-size: cover;
-	max-height: 477px;
-	padding: 10% 0% 10% 0%;
+	margin: 20px 0px 20px 0px;
+	line-height: 20px;
+	padding: 228.5px 0px 228.5px 0px;
+	height: 20px;
+	vertical-align: middle;
 	text-align: center;
 	letter-spacing: 0.016129em;
 	font-family: Raleway;
@@ -19,74 +22,5 @@ h1 {
     font-weight: 100;
 	font-style: normal;
 	text-transform: none;
-    line-height: 1.25em;
     color: #fff;
-}
-#SignINUP{
-
-}
-#campH1{
-	background-image: url("../media/camper.JPG");
-}
-form{
-	margin: 0% 8% 5% 8%;
-  display: grid;
-  grid-template-areas:
-  'disc disc disc disc disc'
-  'main main main main right'
-  'week week week week week'
-  'back back back back back'
-  'cert cert cert cert cert'
-  'sign sign sign sign sign'
-  'sub sub sub sub sub';
-  grid-gap: 10px;
-}
-fieldset{
-	background-color: rgb(220, 220, 220);
-	font-family: Verdana;
-	font-size: 14px;
-}
-#logoFig{
-	grid-area: right;
-}
-#logoFig figcaption{
-	margin-left: 30px;
-	text-align: left;
-}
-#submitButton {
-	grid-area: sub;
-}
-#discriptionApplication{
-	grid-area: disc;
-}
-#weeksApplication{
-	grid-area: week;
-}
-#camperInfoApplication{
-	grid-area: back;
-}
-#mainApplication{
-	grid-area: main;
-}
-#backgroundCheck{
-	grid-area: back;
-}
-#certificationField{
-	grid-area: cert;
-}
-#signatureField{
-	grid-area: sign;
-}
-
-legend {
-	font-family: Arial;
-	font-size: 24px;
-	font-weight: bold;
-}
-input {
-	margin: 2px;
-}
-#banner-wrapper{
-	float: left;
-	margin-left: 6%;
 }
