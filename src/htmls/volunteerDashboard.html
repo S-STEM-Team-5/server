@@ -14,22 +14,22 @@
 	<!------------------------>
 
 	<h1> Volunteer Dashboard </h1>
-	<hr />
 	<article>
 		<div id="dashboard">
-			<h2>Welcome ________ to your dashboard!!</h2>
-			<p>Here you can edit/remove your volunteer application. You can also view your status of approval.</p>
+			<h2 id="welcome">Welcome ________!!</h2>
+			<p> Here on your dashboard you can fill out your volunteer application or 
+				remove your volunteer application. You can also view your approval status 
+				and what weeks you have been approved for. Please keep in mind that we have 
+				many applications to review. So thank you for your patience.
+			</p>
 			<hr class="shortHr"/>
-				<table id="statusTable">
-					<tr>
-						<td id="approvalStatus"> Status: Pending</td>
-						<td id="weeksToWork"> Weeks: Unavailble</td>
-					</tr>
-				</table>
+			<button id="newApplicationButton"> New Application </button>
+			<button id="removeApplicationButton"> Remove Application </button>
+			<hr class="shortHr"/>
+				<p id="approvalStatus"> Status: Approved </p>
+				<p id="weeksToWork"> Weeks: Kids, Siblings</p>
 			<hr class="shortHr"/>
 		</div>
 	</article>
-
-	<hr />
 </body>
 </html>

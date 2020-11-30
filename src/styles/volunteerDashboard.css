@@ -34,6 +34,19 @@ h1{
 	text-transform: none;
     color: #fff;
 }
+button {
+	background-color: rgb(185, 185, 185);
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px black;
+	padding: 10px 20px 10px 20px;
+	margin: 1em 5px 1em 5px;
+	font-size: 22px;
+	color: white;
+	font-family: RalewayThin;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px black;
+}
 h2 {
 	font-weight: 100;
 	font-family: Raleway;
@@ -42,14 +55,30 @@ article {
 	text-align: center;
 	margin: 0 auto;
 	max-width: 1140px;
+	border: 1px solid gray;
+	padding: 5px 5px 200px 5px;
+	margin-bottom: 200px;
+}
+hr {
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 60%;
 }
 #dashboard {
 	/* text-align: left; */
 }
-#statusTable{
-	text-align: center;
-	margin: 0 auto;
+#approvalStatus {
+	display: inline;
+	padding: 10px 20px 10px 0px;
+	border-top: 0px;
+	border-right: 1px;
+	border-bottom: 0px;
+	border-left: 0px;
+	border-style: solid;
+	border-color: gray;
 }
-#statusTable tbody tr td{
-	margin: 5px 20px 5px 5px;
+#weeksToWork {
+	display: inline;
+	padding: 10px 0px 10px 20px;
 }
