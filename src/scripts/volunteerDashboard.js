@@ -56,6 +56,7 @@ function initApplicationButtons(){
 		//TODO: Remove Application
 		$('#applicationMessage').text('Your application has been removed.');
 		$('.smallButtons').css('display', 'none');
+		initStatus();
 	});
 	$('#removeNoButton').on('click', function() {
 		$('#applicationMessage').text('Your application was not removed.');

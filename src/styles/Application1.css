@@ -17,6 +17,19 @@ body {
     letter-spacing: 0px;
     line-height: 1.6em;
 }
+#submitButton {
+	background-color: rgb(185, 185, 185);
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px black;
+	padding: 10px 20px 10px 20px;
+	margin: 1em 5px 1em 5px;
+	font-size: 22px;
+	color: white;
+	font-family: RalewayThin;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px black;
+}
 #volH1{
 	background: gray url("../media/staff.png") no-repeat center;
 	background-size: cover;
