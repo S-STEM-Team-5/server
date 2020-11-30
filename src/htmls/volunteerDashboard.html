@@ -16,15 +16,22 @@
 	<h1> Volunteer Dashboard </h1>
 	<article>
 		<div id="dashboard">
+			<!-- Welcome -->
 			<h2 id="welcome">Welcome ________!!</h2>
 			<p> Here on your dashboard you can fill out your volunteer application or 
 				remove your volunteer application. You can also view your approval status 
 				and what weeks you have been approved for. Please keep in mind that we have 
 				many applications to review. So thank you for your patience.
 			</p>
+			<!-- Applicaton Manage -->
 			<hr class="shortHr"/>
 			<button id="newApplicationButton"> New Application </button>
+			<button id="viewApplicationButton"> View Application </button>
 			<button id="removeApplicationButton"> Remove Application </button>
+				<p id="applicationMessage"></p>
+				<button class="smallButtons" id="removeYesButton"> Yes </button>
+				<button class="smallButtons" id="removeNoButton"> No </button>
+			<!-- Status -->
 			<hr class="shortHr"/>
 				<p id="approvalStatus"> Status: Approved </p>
 				<p id="weeksToWork"> Weeks: Kids, Siblings</p>

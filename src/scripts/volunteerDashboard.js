@@ -22,21 +22,44 @@ function initApplicationButtons(){
 		$(this).css('background-color', 'rgb(185, 185, 185)');
 	});
 
-	//Sign-In
+	//New Application
 	$('#newApplicationButton').on('click', function(){
 		window.location.href = "volApplication1.html";
 	});
-	//Register
-	$('#RegisterButton').on('click', function(){
-		$('#prompt').css('display', 'none');
-		$('#register').css('display', 'inline');
-		$('#signIn').css('display', 'none');
+	//Remove Application
+	$('#removeApplicationButton').on('click', function(){
+		//TODO: Check to see if they have an application to remove.
+		let dataHaveApplication = true;
+		if(dataHaveApplication){
+			$('#applicationMessage').text('Are you sure you want to remove your application?');
+			$('.smallButtons').css('display', 'inline');
+		}
+		else{
+			$('#applicationMessage').text('You do not have an application to remove.');
+		}
 	});
-	//GoBack
-	$('.backButton').on('click', function(){
-		$('#prompt').css('display', 'inline');
-		$('#register').css('display', 'none');
-		$('#signIn').css('display', 'none');
+	//View Application
+	$('#viewApplicationButton').on('click', function(){
+		//TODO: Check to see if they have an application to review.
+		let dataHaveApplication = false;
+		if(dataHaveApplication){
+			//TODO: View Application
+		}
+		else{
+			$('#applicationMessage').text('You do not have an application to review.');
+		}
+		
+	});
+
+	//Yes No Buttons
+	$('#removeYesButton').on('click', function() {
+		//TODO: Remove Application
+		$('#applicationMessage').text('Your application has been removed.');
+		$('.smallButtons').css('display', 'none');
+	});
+	$('#removeNoButton').on('click', function() {
+		$('#applicationMessage').text('Your application was not removed.');
+		$('.smallButtons').css('display', 'none');
 	});
 }
 

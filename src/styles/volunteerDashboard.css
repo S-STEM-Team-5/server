@@ -47,6 +47,10 @@ button {
 	font-weight: bold;
 	text-shadow: 2px 2px 2px black;
 }
+.smallButtons {
+	font-size: 16px;
+	display: none;
+}
 h2 {
 	font-weight: 100;
 	font-family: Raleway;
@@ -65,9 +69,6 @@ hr {
 	margin-bottom: 20px;
 	width: 60%;
 }
-#dashboard {
-	/* text-align: left; */
-}
 #approvalStatus {
 	display: inline;
 	padding: 10px 20px 10px 0px;
@@ -81,4 +82,7 @@ hr {
 #weeksToWork {
 	display: inline;
 	padding: 10px 0px 10px 20px;
+}
+#applicationMessage {
+	color: red;
 }
