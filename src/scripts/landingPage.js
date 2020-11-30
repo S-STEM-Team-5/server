@@ -7,12 +7,10 @@ main();
 function initPromptButtons(){
 	$('.clickableButton').on('mouseover', function(){
 		$(this).css('cursor', 'pointer');
-		$(this).css('text-shadow', '0px 0px 0px black');
-		$(this).css('box-shadow', '0px 0px 0px black');
+		$(this).css('background-color', 'rgb(73, 73, 73)');
 	}).on('mouseout', function(){
 		$(this).css('cursor', 'default');
-		$(this).css('text-shadow', '2px 2px 2px black');
-		$(this).css('box-shadow', '3px 3px 2px black');
+		$(this).css('background-color', 'rgb(185, 185, 185)');
 	});
 
 	//Sign-In
