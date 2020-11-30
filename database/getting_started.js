@@ -5,7 +5,7 @@
 // mongoosejs.com/docs/guide.html
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test', {useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost/test', {useUnifiedTopology: true}, {useNewUrlParser: true});
 
 
 const db = mongoose.connection;
@@ -25,6 +25,16 @@ db.once('open', function() {
 		}
 	});
 
+
+	//Schema describing guardian
+	const guardianSchema = new mongoose.Schema({
+		contactInfo: { 
+			homePhone: { type: Number, required: false},
+			workPhone: { type: Number, required: false},
+			emergencyPhone: { type: Number, required: true}
+		}
+	});	
+	
 	const camperSchema = new mongoose.Schema({
 		guardianEmail: {type: String, required: true},
 		name: {
@@ -44,7 +54,6 @@ db.once('open', function() {
 		previousCamper: {type: Boolean, required: true},
 		previousOvernightCamper: { type: String, required: true},
 		canMakeFriends: { type: String, required: true},
-		
 		
 		//Camper Attending session 1 or 5
 		sibOrParentName: { type: String, required: false}, 
@@ -80,14 +89,6 @@ db.once('open', function() {
 		applicationBy: { type: Boolean} 
 	});
 
-	//Schema describing guardian
-	const guardianSchema = new mongoose.Schema({
-		contactInfo: { 
-			homePhone: { type: Number, required: false},
-			workPhone: { type: Number, required: false},
-			emergencyPhone: { type Number, required: true}
-		}
-	});	
 
 	//Schema that describes a volunteer. 
 	const volunteerSchema = new mongoose.Schema({
@@ -123,25 +124,60 @@ db.once('open', function() {
 			emergencyPhone: { type Number, required: true}
 		}
 	});	
-*/
+	const accountSchema = new mongoose.Schema({
+		accType:  { type: String, required: true },
+	 	email: { type: String, required: true, unique: true }, 
+		password: { type: String, required: true },	
+		name: {
+			fname: { type: String, required: true },
+			lname: { type: String, required: true }
+		}
+	});
 
-	const guardian = mongoose.model('Guardian', GuardianSchema);
-	
-	const bryan = new Guardian({
+	*/
+
+	const guardian = mongoose.model('Guardian', guardianSchema);
+	const account = mongoose.model('Account', accountSchema);
+	const camper = mongoose.model('Camper', camperSchema);
+	const volunteer = mongoose.model('Volunteer', volunteerSchema);
+
+	/*
+	const bryanAcc = new account({
+		"accType": "The realest",
+		"email": "cracked@fortnite.myguy",
+		"password": "nunya",
+		"name": {
+			"fname": "Bryan",
+			"lname": "Hill"
+		}
+	})
+	const bryan = new guardian({
+		"email": "cracked@fortnite.myguy",
 		"contactInfo" : {
 			"homePhone" : 1111111111,
 			"workPhone" : 2222222222,
 			"emergencyPhone" : 33333333333
 		}
 	});
+
 	bryan.save(function (err, bryan) {
 		if (err) return console.error(err);
 	});
-	
-	Guardian.find(function (err, guardians) {
-		if (err) return consile.error(err);
+
+	bryanAcc.save(function (err, bryanAcc) {
+		if (err) return console.error(err);
+	});
+
+	account.find(function (err, accounts) {
+		if (err) return console.error(err);
+		console.log(accounts);
+	});
+
+	guardian.find(function (err, guardians) {
+		if (err) return console.error(err);
 		console.log(guardians);
 	});
+	*/
 	//Adds function 'speak' to the schema methods property 
 	//kittySchema.methods.speak = function() {
 	//	const greeting = this.name
