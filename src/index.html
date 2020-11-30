@@ -16,52 +16,58 @@
 	<h1> Welcome! </h1>
 	<article>
 		<!-- Main Prompt -->
-		<div class="form" id="prompt">
+		<div class="forms" id="prompt">
 			<button class="clickableButton" id="SignInButton"> Sign-In </button>
 			<hr />
 			<button class="clickableButton" id="RegisterButton"> Register </button>
 		</div>
 		<!-- Sign In -->
-		<div class="form" id="signIn">
-			<h2> Sign-In </h2>
-			<label for="email"> Email: </label>
-				<input type="email" name="email" id="email" required="required" size="36"/>
-			<br />
-			<label for="password"> Password: </label>
-				<input type="password" name="password" size="20"/>
-			<br />
-			<button class="clickableButton submitButton"> Submit </button>
-			<hr />
-			<button class="clickableButton backButton"> Back </button>
+		<div class="forms" id="signIn">
+			<form method="get"> 
+				<fieldset>
+					<legend> Sign-In </legend>
+						<input type="email" name="email" required="required" size="24" placeholder="Email"/>
+						<br />
+						<input type="password" name="password" required="required" size="24" placeholder="Password"/>
+						<br />
+						<button class="clickableButton submitButton"> Submit </button>
+						<button class="clickableButton backButton"> Back </button>
+				</fieldset>
+			</form>
 		</div>
 		<!-- Register -->
-		<div class="form" id="register">
-			<h2> Register </h2>
-			<!-- Account Type -->
-			<label for="accountType"> Account Type: </label>
-			<input type="radio" name="accountType" id="Parent" value="Parent" />
-			<label for="Parent"> Parent </label>
-			<input type="radio" name="accountType" id="Volunteer" value="Volunteer"/>
-			<label for="Volunteer"> Volunteer </label>
-			<!-- Email and Password -->
-			<label for="email"> Email: </label>
-			<input type="email" name="email" id="email" required="required" size="36"/>
-			<br />
-			<label for="password"> Password: </label>
-			<input type="password" name="password" size="20"/>
-			<br />
-			<label for="password"> Repeat Password: </label>
-			<input type="password" name="password" size="20"/>
-			<br />
-			<button class="clickableButton submitButton"> Submit </button>
-			<hr />
-			<button class="clickableButton backButton"> Back </button>
+		<div class="forms" id="register">
+			<form method="get">
+				<fieldset>
+					<legend> Register </legend>
+					<!-- Account Type -->
+					<input type="radio" name="accountType" value="Parent" required="required" id="radioParent" />
+					<label for="radioParent"> Parent </label>
+					<input type="radio" name="accountType" value="Volunteer" required="required" id="radioVolunteer" />
+					<label for="radioVolunteer"> Volunteer </label>
+					<br />
+					<!-- Name -->
+					<input type="text" name="firstName" required="required" size="24" placeholder="First Name"/>
+					<br />
+					<input type="text" name="lastName" required="required" size="24" placeholder="Last Name"/>
+					<!-- Email and Password -->
+					<br />
+					<input type="email" name="email" required="required" size="24" placeholder = "Email"/>
+					<br />
+					<input type="password" name="password" size="24" placeholder="Password" required="required"/>
+					<br />
+					<input type="password" name="password" size="24" placeholder="Retype Password" required="required"/>
+					<br />
+					<button class="clickableButton submitButton"> Submit </button>
+					<button class="clickableButton backButton"> Back </button>
+				</fieldset>
+			</form>
 		</div>
 	</article>
 
 	<ul>
-		<li class="page-collection"><a href="htmls/volApplication1.html">Volunteer Application</a></span></li>
-		<li class="page-collection"><a href="htmls/camperApplication1.html">Camper Application</a></span></li>
+		<li class="page-collection"><a href="htmls/volApplication1.html">Volunteer Application</a></li>
+		<li class="page-collection"><a href="htmls/camperApplication1.html">Camper Application</a></li>
 	</ul>
 </body>
 </html>

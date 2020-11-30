@@ -12,7 +12,7 @@ function initNav(){
 	ccfLogoLink.setAttribute('href', 'http://www.campcarefree.org/');
 	let ccfLogo = document.createElement('img');
 	ccfLogo.setAttribute('id', 'CCFLogoLink');
-	ccfLogo.setAttribute('src', '../media/logo.png');
+	//ccfLogo.setAttribute('src', '../media/logo.png');
 	ccfLogo.setAttribute('alt', 'Camp Carefree');
 	ccfLogoLink.appendChild(ccfLogo);
 	ccfLogoDiv.appendChild(ccfLogoLink);
