@@ -1,6 +1,6 @@
 function main() {
 	initWelcome();
-	initApplicationButtons();
+	initTableButtons();
 	initTable();
 }
 main();
@@ -8,34 +8,47 @@ main();
 function initWelcome(){
 	//TODO: Get Name
 
-	let dataName = "Ethan";
+	let dataName = "Admin";
 
 	$('#welcome').text("Welcome " + dataName +"!");
 }
 
-function initApplicationButtons(){
+function initTableButtons(){
 	$('button').on('mouseover', function(){
 		$(this).css('cursor', 'pointer');
-		$(this).css('background-color', 'rgb(73, 73, 73)');
 	}).on('mouseout', function(){
 		$(this).css('cursor', 'default');
-		$(this).css('background-color', 'rgb(185, 185, 185)');
 	});
 
-	//New Application
-	$('#newApplicationButton').on('click', function(){
-		window.location.href = "camperApplication1.html";
+
+	$('#counselorTable').css('display', 'none');
+	$('#camperTableButton').css('background-color', 'rgb(73, 73, 73)');
+	$('#camperTableButton').on('click', function(){
+		$('#counselorTable').css('display', 'none');
+		$('#camperTable').css('display', 'inline-block');
+		$(this).css('background-color', 'rgb(73, 73, 73)');
+		$('#counselorTableButton').css('background-color', 'rgb(185, 185, 185)');
 	});
-	//Remove Application
-	$('.removeApplicationButton').on('click', function(){
-		//TODO: Check to see if they have an application to remove.
-		let dataHaveApplication = true;
-		if(dataHaveApplication){
-			$('#applicationMessage').text("Are you sure you want to remove _____'s application?");
+	$('#counselorTableButton').on('click', function(){
+		$('#counselorTable').css('display', 'inline-block');
+		$('#camperTable').css('display', 'none');
+		$(this).css('background-color', 'rgb(73, 73, 73)');
+		$('#camperTableButton').css('background-color', 'rgb(185, 185, 185)');
+	});
+
+
+
+
+	//Remove Entry
+	$('.removeEntryButton').on('click', function(){
+		//TODO: Check to see if they have an entry to remove.
+		let dataHaveEntry = true;
+		if(dataHaveEntry){
+			$('#applicationMessage').text("Are you sure you want to remove _____'s?");
 			$('.smallButtons').css('display', 'inline');
 		}
 		else{
-			$('#applicationMessage').text('You do not have an application to remove.');
+			$('#applicationMessage').text('You do not have an entry to remove.');
 		}
 	});
 	//View Application

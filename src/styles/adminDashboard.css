@@ -18,7 +18,7 @@ body {
     line-height: 1.6em;
 }
 h1{
-	background: gray url("../media/ToTheLake.png") no-repeat center;
+	background: gray url("../media/CampFire.jpg") no-repeat center;
 	background-size: cover;
 	margin: 20px 0px 20px 0px;
 	line-height: 20px;
@@ -58,7 +58,6 @@ h2 {
 article {
 	text-align: center;
 	margin: 0 auto;
-	max-width: 1140px;
 	border: 1px solid gray;
 	padding: 5px 5px 200px 5px;
 	margin-bottom: 200px;

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Admin Dashboard</title>
+	<script defer src='../scripts/jquery-3.5.1.min.js'></script>
+	<script defer src='../scripts/nav.js'></script>
+	<script defer src='../scripts/adminDashboard.js'></script>
+	<link href="../styles/adminDashboard.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+	<!-- Navigation Panel -->
+	<div id="navigation-top"></div>
+	<!------------------------>
+
+	<h1> Admin Dashboard </h1>
+	<article>
+		<div id="dashboard">
+			<!-- Welcome -->
+			<h2 id="welcome">Welcome ________!!</h2>
+			<p> Here you can pull the database of all the campers, volunteers, and parent accounts.
+			</p>
+			<!-- Applicaton Manage -->
+			<hr class="shortHr"/>
+			<button id="camperTableButton"> Camper Table </button>
+			<button id="counselorTableButton"> Counselor Table </button>
+			<p id="applicationMessage"></p>
+			<button class="smallButtons" id="removeYesButton"> Yes </button>
+			<button class="smallButtons" id="removeNoButton"> No </button>
+			<!-- Table -->
+			<table id="camperTable">
+				<tr>
+					<td><p class="CamperName"> Name: Unavailable </p></td>
+					<td><p class="CamperAge"> Age: Unavailable </p></td>
+					<td><p class="approvalStatus"> Status: Not Submitted </p></td>
+					<td><p class="weekToGo"> Week: Unavailable </p></td>
+					<td><button class="viewEntryButton"> View Entry </button></td>
+					<td><button class="removeEntryButton"> Remove Entry </button></td>
+				</tr>
+			</table>
+			<table id="counselorTable">
+				<tr>
+					<td><p class="CounselorName"> Name: Unavailable </p></td>
+					<td><p class="CounselorAge"> Age: Unavailable </p></td>
+					<td><p class="CounselorAge"> Previously Worked: Unavailable </p></td>
+					<td><p class="CounselorAge"> Has Car: Unavailable </p></td>
+					<td><p class="approvalStatus"> Status: Not Submitted </p></td>
+					<td><p class="weekToWork"> Weeks: Unavailable </p></td>
+					<td><button class="viewEntryButton"> View Entry </button></td>
+					<td><button class="removeEntryButton"> Remove Entry </button></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+</body>
+</html>
