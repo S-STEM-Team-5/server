@@ -18,23 +18,29 @@
 		<div id="dashboard">
 			<!-- Welcome -->
 			<h2 id="welcome">Welcome ________!!</h2>
-			<p> Here on your dashboard you can fill out your volunteer application or 
-				remove your volunteer application. You can also view your approval status 
-				and what weeks you have been approved for. Please keep in mind that we have 
+			<p> Here on your dashboard you can fill out your camper's application or 
+				remove your camper's application. You can also view your approval status 
+				and what week they have been selected for. Please keep in mind that we have 
 				many applications to review. So thank you for your patience.
 			</p>
 			<!-- Applicaton Manage -->
 			<hr class="shortHr"/>
 			<button id="newApplicationButton"> New Application </button>
-			<button id="viewApplicationButton"> View Application </button>
-			<button id="removeApplicationButton"> Remove Application </button>
+			<button id="accountSettingsButton"> Account Settings </button>
 				<p id="applicationMessage"></p>
 				<button class="smallButtons" id="removeYesButton"> Yes </button>
 				<button class="smallButtons" id="removeNoButton"> No </button>
-			<!-- Status -->
+			<!-- Table -->
 			<hr class="shortHr"/>
-				<p id="approvalStatus"> Status: Approved </p>
-				<p id="weeksToWork"> Weeks: Kids, Siblings</p>
+			<table>
+				<tr>
+					<td><p class="CamperName"> Name: Unavailable </p></td>
+					<td><p class="approvalStatus"> Status: Not Submitted </p></td>
+					<td><p class="weekToGo"> Week: Unavailable </p></td>
+					<td><button class="viewApplicationButton"> View Application </button></td>
+					<td><button class="removeApplicationButton"> Remove Application </button></td>
+				</tr>
+			</table>
 			<hr class="shortHr"/>
 		</div>
 	</article>

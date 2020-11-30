@@ -69,6 +69,19 @@ hr {
 	margin-bottom: 20px;
 	width: 60%;
 }
+table {
+	margin: 0 auto;
+	border: 2px solid gray;
+	border-spacing: 2px;
+}
+td {
+	border: 2px solid gray;
+	padding: 0px 15px 0px 15px;
+}
+.removeApplicationButton, .viewApplicationButton {
+	font-size: 18px;
+	text-shadow: 1px 1px 1 black;
+}
 #approvalStatus {
 	display: inline;
 	padding: 10px 20px 10px 0px;

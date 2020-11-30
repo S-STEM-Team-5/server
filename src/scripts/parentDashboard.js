@@ -1,7 +1,7 @@
 function main() {
 	initWelcome();
 	initApplicationButtons();
-	initStatus();
+	initTable();
 }
 main();
 
@@ -24,10 +24,10 @@ function initApplicationButtons(){
 
 	//New Application
 	$('#newApplicationButton').on('click', function(){
-		window.location.href = "volApplication1.html";
+		window.location.href = "camperApplication1.html";
 	});
 	//Remove Application
-	$('#removeApplicationButton').on('click', function(){
+	$('.removeApplicationButton').on('click', function(){
 		//TODO: Check to see if they have an application to remove.
 		let dataHaveApplication = true;
 		if(dataHaveApplication){
@@ -39,7 +39,7 @@ function initApplicationButtons(){
 		}
 	});
 	//View Application
-	$('#viewApplicationButton').on('click', function(){
+	$('.viewApplicationButton').on('click', function(){
 		//TODO: Check to see if they have an application to review.
 		let dataHaveApplication = false;
 		if(dataHaveApplication){
@@ -49,6 +49,10 @@ function initApplicationButtons(){
 			$('#applicationMessage').text('You do not have an application to review.');
 		}
 		
+	});
+	//Account Settings
+	$('#accountSettingsButton').on('click', function(){
+		window.location.href = "accountSettings.html";
 	});
 
 	//Yes No Buttons
@@ -64,7 +68,9 @@ function initApplicationButtons(){
 	});
 }
 
-function initStatus(){
+function initTable(){
+	//TODO: Get campers from database
+	
 	let Status = $('#approvalStatus');
 	let Weeks = $('#weeksToWork');
 	//TODO: Get Status from Database
@@ -83,4 +89,6 @@ function initStatus(){
 	else {
 		Weeks.text("Weeks: Unavailable")
 	}
+
+	
 }

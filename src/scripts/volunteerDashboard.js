@@ -50,6 +50,10 @@ function initApplicationButtons(){
 		}
 		
 	});
+	//Account Settings
+	$('#accountSettingsButton').on('click', function(){
+		window.location.href = "accountSettings.html";
+	});
 
 	//Yes No Buttons
 	$('#removeYesButton').on('click', function() {
