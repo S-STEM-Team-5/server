@@ -92,3 +92,6 @@ legend {
 	font-size: 22px;
 	padding: 10px 10px 10px 10px;
 }
+.ErrorMessage {
+	color: red;
+}

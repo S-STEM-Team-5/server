@@ -4,6 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Landing Page</title>
+	<script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script defer src='scripts/jquery-3.5.1.min.js'></script>
 	<script defer src='scripts/nav.js'></script>
 	<script defer src='scripts/landingPage.js'></script>
@@ -17,21 +19,22 @@
 	<article>
 		<!-- Main Prompt -->
 		<div class="forms" id="prompt">
-			<button class="clickableButton" id="SignInButton"> Sign-In </button>
+			<button type="button" class="clickableButton" id="SignInButton"> Sign-In </button>
 			<hr />
-			<button class="clickableButton" id="RegisterButton"> Register </button>
+			<button type="button" class="clickableButton" id="RegisterButton"> Register </button>
 		</div>
 		<!-- Sign In -->
 		<div class="forms" id="signIn">
 			<form method="get"> 
 				<fieldset>
 					<legend> Sign-In </legend>
-						<input type="email" name="email" required="required" size="24" placeholder="Email"/>
+						<input type="email" name="email" required="required" size="24" placeholder="Email" id="sEmail" />
 						<br />
-						<input type="password" name="password" required="required" size="24" placeholder="Password"/>
+						<input type="password" name="password" required="required" size="24" placeholder="Password" id="sPassword"/>
 						<br />
-						<button class="clickableButton submitButton"> Submit </button>
-						<button class="clickableButton backButton"> Back </button>
+						<p id="sErrorMessage"></p>
+						<button type="button" class="clickableButton submitButton" id="submitButton"> Submit </button>
+						<button type="button" class="clickableButton backButton"> Back </button>
 				</fieldset>
 			</form>
 		</div>
@@ -59,7 +62,7 @@
 					<input type="password" name="password" size="24" placeholder="Retype Password" required="required"/>
 					<br />
 					<button class="clickableButton submitButton"> Submit </button>
-					<button class="clickableButton backButton"> Back </button>
+					<button type="button" class="clickableButton backButton"> Back </button>
 				</fieldset>
 			</form>
 		</div>

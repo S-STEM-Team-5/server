@@ -31,4 +31,45 @@ function initPromptButtons(){
 		$('#register').css('display', 'none');
 		$('#signIn').css('display', 'none');
 	});
+
+	$('#submitButton').on('click', function(){
+		if($('#sEmail').val() != "" && ($('#sPassword').val() != "")){
+			console.log($('#sPassword').val());
+			let jsonEmailTemp = {
+				email: $('#sEmail').val(),
+				password: $('#sPassword').val()
+			}
+			const response = postAccountVerification(jsonEmailTemp);
+			if(response.message == "Cannot find Account"){
+				$('#sErrorMe').text("Invaild Credentails");
+			}else{
+				$('#sErrorMe').text("");
+			}
+		}
+	});
+
+	const postAccountVerification = async () => {
+		try {
+			let json = {
+				email : "joe@apstate.edu",
+				password : "password"
+			};
+			const response = await axios.post("http://localhost:3013/rest/account/signin", json);
+			console.log(response + "hi");
+			return response;
+		}catch (err) {
+			console.log(err);
+		}
+	}
+	
+	
+	const getRequest = async () => {
+		try {
+			const response = await axios.get("http://localhost:3013/rest/account/");
+			console.log(response.data[0].email);
+		}catch (err) {
+			console.log(err);
+		}
+	}
 }
+
