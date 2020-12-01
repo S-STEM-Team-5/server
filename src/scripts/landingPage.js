@@ -47,12 +47,27 @@ function initSubmitButtons() {
 	$('#sSubmitButton').on('click', function() {
 		if ($('#sEmail').val() != "" && ($('#sPassword').val() != "")) {
 			const response = postRequestSignIn().then((response) => {
-				if (response.message == "Cannot find Account") {
+				if (response.data.message == "Cannot find Account") {
 					$('#sErrorMessage').text("Invaild Credentails");
 					$('#sErrorMessage').css('display', 'inline');
 				} else {
 					$('#sErrorMessage').text("");
 					$('#sErrorMessage').css('display', 'none');
+					let accType = response.data.accType;
+					console.log(response.data);
+					if(accType == "Volunteer"){ //Volunteer
+						window.location.href = "htmls/volunteerDashboard.html";
+					}
+					else if(accType == "Parent"){ //Parent
+						window.location.href = "htmls/parentDashboard.html";
+					}
+					else if(accType == "Admin"){ //Admin
+						window.location.href = "htmls/adminDashboard.html";
+					}
+					else{ //Error Message
+						$('#sErrorMessage').text("Account Type is Broken");
+						$('#sErrorMessage').css('display', 'inline');
+					}
 				}
 			});
 		}
@@ -67,8 +82,7 @@ function initSubmitButtons() {
 		   $('#rEmail').val() != "" &&
 		   $('#rPassword').val() != "" &&
 		   $('#rRPassword').val() != "" &&
-			 ($('#radioVolunteer').attr('checked') ||
-			 $('#radioParent').attr('checked')))
+		   (($('#radioVolunteer').is(':checked')) || ($('#radioParent').is(':checked'))))
 		{
 			if($('#rPassword').val() != $('#rRPassword').val()){
 				$('#rErrorMessage').text("Passwords do not match");
@@ -106,12 +120,12 @@ async function postRequestSignIn() {
 		"password": $('#sPassword').val()
   }
   const response = await axios.post('http://localhost:3013/rest/account/signin', data);
-	return response.data;
+	return response;
 }
 //Register Post Request
 async function postRequestRegister() {
 	let accTypeS = "Parent";
-	if($('radioVolunteer').attr('checked') == true)
+	if($('#radioVolunteer').is(':checked') == true)
 		accTypeS = "Volunteer";
 	var data = {
 		"accType": accTypeS,

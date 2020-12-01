@@ -93,6 +93,7 @@ legend {
 	padding: 10px 10px 10px 10px;
 }
 #sErrorMessage, #rErrorMessage {
+	margin: 0 auto;
 	color: red;
 	display: none;
 	text-align: center;
