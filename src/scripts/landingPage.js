@@ -40,7 +40,7 @@ function resetErrorMessages(){
 	$('#rErrorMessage, #sErrorMessage').css('display','none').text("");
 }
 /* ----------------------------------------------------
-	initSubmitButtons and SignIn and Register Forms 
+	initSubmitButtons and SignIn and Register Forms
    ----------------------------------------------------*/
 function initSubmitButtons() {
 	//Sign In
@@ -66,7 +66,9 @@ function initSubmitButtons() {
 		   $('#lName').val() != "" &&
 		   $('#rEmail').val() != "" &&
 		   $('#rPassword').val() != "" &&
-		   $('#rRPassword').val() != "")
+		   $('#rRPassword').val() != "" &&
+			 ($('#radioVolunteer').attr('checked') ||
+			 $('#radioParent').attr('checked')))
 		{
 			if($('#rPassword').val() != $('#rRPassword').val()){
 				$('#rErrorMessage').text("Passwords do not match");
@@ -75,12 +77,13 @@ function initSubmitButtons() {
 				$('#rErrorMessage').text("");
 				$('#rErrorMessage').css('display', 'none');
 				const response = postRequestRegister().then((response) => {
-					if (response.message == "Cannot find Account") {
-						$('#sErrorMessage').text("Invaild Credentails");
-						$('#sErrorMessage').css('display', 'inline').css('color', 'red');
+					console.log(response.status);
+					if (response.status == 200) {
+						$('#rErrorMessage').text("Account already exists");
+						$('#rErrorMessage').css('display', 'inline').css('color', 'red');
 					} else {
-						$('#sErrorMessage').text("Account Created");
-						$('#sErrorMessage').css('display', 'inline').css('color', 'green');
+						$('#rErrorMessage').text("Account Created");
+						$('#rErrorMessage').css('display', 'inline').css('color', 'green');
 					}
 				});
 			}
@@ -120,6 +123,5 @@ async function postRequestRegister() {
 		}
 	}
 	const response = await axios.post('http://localhost:3013/rest/account', data);
-	console.log(response);
-	return response.data;
+	return response;
 }
