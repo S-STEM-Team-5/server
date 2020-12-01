@@ -92,6 +92,9 @@ legend {
 	font-size: 22px;
 	padding: 10px 10px 10px 10px;
 }
-.ErrorMessage {
+#sErrorMessage, #rErrorMessage {
 	color: red;
+	display: none;
+	text-align: center;
+	font-weight: bold;
 }

@@ -25,7 +25,7 @@
 		</div>
 		<!-- Sign In -->
 		<div class="forms" id="signIn">
-			<form method="get">
+			<form id="signInForm">
 				<fieldset>
 					<legend> Sign-In </legend>
 						<input type="email" name="email" required="required" size="24" placeholder="Email" id="sEmail" />
@@ -33,14 +33,14 @@
 						<input type="password" name="password" required="required" size="24" placeholder="Password" id="sPassword"/>
 						<br />
 						<p id="sErrorMessage"></p>
-						<button type="button" class="clickableButton submitButton" id="submitButton"> Submit </button>
+						<button class="clickableButton submitButton" id="sSubmitButton"> Submit </button>
 						<button type="button" class="clickableButton backButton"> Back </button>
 				</fieldset>
 			</form>
 		</div>
 		<!-- Register -->
 		<div class="forms" id="register">
-			<form method="get">
+			<form id="registerForm">
 				<fieldset>
 					<legend> Register </legend>
 					<!-- Account Type -->
@@ -50,18 +50,19 @@
 					<label for="radioVolunteer"> Volunteer </label>
 					<br />
 					<!-- Name -->
-					<input type="text" name="firstName" required="required" size="24" placeholder="First Name"/>
+					<input type="text" name="firstName" required="required" size="24" placeholder="First Name" id="fName"/>
 					<br />
-					<input type="text" name="lastName" required="required" size="24" placeholder="Last Name"/>
+					<input type="text" name="lastName" required="required" size="24" placeholder="Last Name" id="lName"/>
 					<!-- Email and Password -->
 					<br />
-					<input type="email" name="email" required="required" size="24" placeholder = "Email"/>
+					<input type="email" name="email" required="required" size="24" placeholder = "Email" id="rEmail"/>
 					<br />
-					<input type="password" name="password" size="24" placeholder="Password" required="required"/>
+					<input type="password" name="password" size="24" placeholder="Password" required="required" id="rPassword"/>
 					<br />
-					<input type="password" name="password" size="24" placeholder="Retype Password" required="required"/>
+					<input type="password" name="password" size="24" placeholder="Retype Password" required="required" id="rRPassword"/>
 					<br />
-					<button class="clickableButton submitButton"> Submit </button>
+					<p id="rErrorMessage"></p>
+					<button class="clickableButton submitButton" id="rSubmitButton"> Submit </button>
 					<button type="button" class="clickableButton backButton"> Back </button>
 				</fieldset>
 			</form>
