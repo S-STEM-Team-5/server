@@ -57,12 +57,11 @@ function initSubmitButtons() {
 					let accType = response.data.accType;
 					console.log(response.data);
 					if(accType == "Volunteer"){ //Volunteer
-						// $.getScript("volunteerDashboard.js", function() {
-						// 		setEmailAddress($('#sEmail').val());
-						//  });
-						window.location.href = "htmls/volunteerDashboard.html";
+						localStorage["email"] = $('#sEmail').val();
+						window.location.href = "htmls/volunteerDashboard.html?name=";
 					}
 					else if(accType == "Parent"){ //Parent
+						localStorage["email"] = $('#sEmail').val();
 						window.location.href = "htmls/parentDashboard.html";
 					}
 					else if(accType == "Admin"){ //Admin
@@ -129,7 +128,7 @@ async function postRequestSignIn() {
 	}
 	try {
 		const response = await axios.post('http://localhost:3013/rest/account/signin', data);
-		resetErrorMessages()
+		resetErrorMessages();
 		return response;
 	}catch (err) {
 		$('#sErrorMessage').text("Cannont connect to server");
@@ -152,7 +151,7 @@ async function postRequestRegister() {
 	}
 	try{
 		const response = await axios.post('http://localhost:3013/rest/account', data);
-		resetErrorMessages()
+		resetErrorMessages();
 		return response;
 	}catch (err){
 		$('#rErrorMessage').text("Cannont connect to server");

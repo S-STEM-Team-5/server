@@ -6,12 +6,9 @@ function main() {
 main();
 
 function initWelcome(){
-	//TODO: Get Name
-
-	let dataName = userEmailAddress;
-	console.log(userEmailAddress);
-
-	$('#welcome').text("Welcome " + dataName +"!");
+	let email = localStorage["email"];
+	findUserByEmail(email);
+	$('#welcome').text("Welcome " + email +"!");
 }
 
 function initApplicationButtons(){
@@ -92,3 +89,17 @@ function initStatus(){
 
 
 //--------------------------------------------------- API Calls -------------------------------------------------------------
+//Find by email
+async function findUserByEmail(email) {
+	try {
+		const response = await axios.get('http://localhost:3013/rest/volunteer/:email', email);
+		console.log(response.data);
+		return response;
+	}catch (err) {
+		console.log("Can not connect to server.");
+		console.log(err);
+	}
+}
+
+
+
