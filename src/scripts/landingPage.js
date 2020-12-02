@@ -34,6 +34,7 @@ function initPromptButtons() {
 		$('#register').css('display', 'none');
 		$('#signIn').css('display', 'none');
 		resetErrorMessages();
+		clearAllInputs()
 	});
 }
 function resetErrorMessages(){
@@ -56,6 +57,9 @@ function initSubmitButtons() {
 					let accType = response.data.accType;
 					console.log(response.data);
 					if(accType == "Volunteer"){ //Volunteer
+						// $.getScript("volunteerDashboard.js", function() {
+						// 		setEmailAddress($('#sEmail').val());
+						//  });
 						window.location.href = "htmls/volunteerDashboard.html";
 					}
 					else if(accType == "Parent"){ //Parent
@@ -104,7 +108,11 @@ function initSubmitButtons() {
 		}
 	});
 }
-
+function clearAllInputs(){
+	$('input').val("");
+	$('#radioParent, #radioVolunteer').attr('chekced', false);
+}
+//------------------------------------------------------- API Calls --------------------------------------------------------------
 async function getRequest() {
     try {
 		const response = await axios.get("http://localhost:3013/rest/account/");
@@ -115,12 +123,18 @@ async function getRequest() {
 }
 //Sign In Post Request
 async function postRequestSignIn() {
-  var data = {
+	var data = {
 		"email": $('#sEmail').val(),
 		"password": $('#sPassword').val()
-  }
-  const response = await axios.post('http://localhost:3013/rest/account/signin', data);
-	return response;
+	}
+	try {
+		const response = await axios.post('http://localhost:3013/rest/account/signin', data);
+		resetErrorMessages()
+		return response;
+	}catch (err) {
+		$('#sErrorMessage').text("Cannont connect to server");
+		$('#sErrorMessage').css('display', 'inline').css('color', 'red');
+	}
 }
 //Register Post Request
 async function postRequestRegister() {
@@ -136,6 +150,12 @@ async function postRequestRegister() {
 			"lname" : $('#lName').val()
 		}
 	}
-	const response = await axios.post('http://localhost:3013/rest/account', data);
-	return response;
+	try{
+		const response = await axios.post('http://localhost:3013/rest/account', data);
+		resetErrorMessages()
+		return response;
+	}catch (err){
+		$('#rErrorMessage').text("Cannont connect to server");
+		$('#rErrorMessage').css('display', 'inline').css('color', 'red');
+	}
 }

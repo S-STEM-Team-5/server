@@ -8,7 +8,8 @@ main();
 function initWelcome(){
 	//TODO: Get Name
 
-	let dataName = "Ethan";
+	let dataName = userEmailAddress;
+	console.log(userEmailAddress);
 
 	$('#welcome').text("Welcome " + dataName +"!");
 }
@@ -29,7 +30,7 @@ function initApplicationButtons(){
 	//Remove Application
 	$('#removeApplicationButton').on('click', function(){
 		//TODO: Check to see if they have an application to remove.
-		let dataHaveApplication = true;
+		let dataHaveApplication = false;
 		if(dataHaveApplication){
 			$('#applicationMessage').text('Are you sure you want to remove your application?');
 			$('.smallButtons').css('display', 'inline');
@@ -88,3 +89,6 @@ function initStatus(){
 		Weeks.text("Weeks: Unavailable")
 	}
 }
+
+
+//--------------------------------------------------- API Calls -------------------------------------------------------------
