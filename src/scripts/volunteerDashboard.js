@@ -56,7 +56,28 @@ function initApplicationButtons(){
 		findVolunteerByEmail(eml).then((response) => {
 			let dataHaveApplication = (response.message != "Cannot find Volunteer");
 			if(dataHaveApplication){
-				//TODO: View Application
+				//PopulateTable
+				console.log(response);
+				findUserByEmail(response.volEmail).then((response2) => {
+					$('#viewName').text(response2.name.fname + " " + response2.name.lname);
+				});
+				$('#viewEmail').text(response.volEmail);
+				$('#viewBirthday').text(response.birthDate);
+				$('#viewGender').text(response.gender);
+				$('#viewAddress').text(response.address.streetAddr);
+				$('#viewCity').text(response.address.city + ", " + response.address.state);
+				$('#viewZip').text(response.address.zip);
+				$('#viewSchool').text(response.schoolName);
+				$('#viewShirtSize').text(response.shirtSize);
+				$('#viewBringCar').text(response.car);
+				$('#viewPrevVol').text(response.previouslyWorkedAtCamp);
+				$('#viewPrevCamper').text(response.previouslyCamper);
+				$('#viewSSN').text(response.ssn);
+				$('#viewCrime').text(response.crime);
+				$('#viewCrimeDescription').text(response.crimeDescription);
+				$('#viewCertifications').text(response.certifications.join(" "));
+				
+				$('#viewTable').css('display', 'inline');
 			}
 			else{
 				$('#applicationMessage').text('You do not have an application to review.');

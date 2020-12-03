@@ -69,6 +69,21 @@ hr {
 	margin-bottom: 20px;
 	width: 60%;
 }
+#viewTable {
+	margin: 0 auto;
+	border-spacing: 5px;
+	display: none;
+}
+#viewTable td {
+	text-align: right;
+	border-top: 0px;
+	border-right: 0px;
+	border-left: 0px;
+	border-bottom: 1px;
+	border-style: solid;
+	border-color: black;
+	max-width: 200px;
+}
 #approvalStatus {
 	display: inline;
 	padding: 10px 20px 10px 0px;
