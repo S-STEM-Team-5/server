@@ -34,7 +34,7 @@ function initApplicationButtons(){
 
 	//Yes No Buttons
 	$('#removeYesButton').on('click', function() {
-		//TODO: Remove Application
+		//Remove Application
 		removeCamperByID($(this).val()).then((response) => {
 			$('#applicationMessage').text('Your application has been removed.');
 			$('.smallButtons').css('display', 'none');
@@ -65,17 +65,6 @@ function initTable(){
 					$(this).css('cursor', 'default');
 					$(this).css('background-color', 'rgb(185, 185, 185)');
 				});
-				//View Application
-				$('.viewApplicationButton').on('click', function(){
-					let dataHaveApplication = false;
-					if(dataHaveApplication){
-						//TODO: View Application
-					}
-					else{
-						$('#applicationMessage').text('You do not have an application to review.');
-					}
-					
-				});
 			}
 		}
 	});	
@@ -104,6 +93,10 @@ function addRowToTable(name, status, week, id){
 			let button1 = document.createElement("button");
 				button1.setAttribute('class', 'viewApplicationButton');
 				button1.innerHTML = "View Application";
+				//View Application
+				button1.addEventListener('click', () => {
+					updateViewTable(id);
+				});
 		td4.appendChild(button1);
 		tr.append(td4);
 		let td5 = document.createElement("td");
@@ -112,6 +105,7 @@ function addRowToTable(name, status, week, id){
 				button2.innerHTML = "Remove Application";
 				//Remove Application
 				button2.addEventListener('click', () => {
+					$('#viewTable').css('display', 'none');
 					$('#removeYesButton').attr('value', id);
 					$('#applicationMessage').text("Are you sure you want to remove _____'s application?");
 					$('.smallButtons').css('display', 'inline');
@@ -120,6 +114,42 @@ function addRowToTable(name, status, week, id){
 		tr.append(td5);
 		table.appendChild(tr);
 	camperTableDiv.appendChild(table);
+}
+
+function updateViewTable(id){
+	findCamperByID(id).then((response) => {
+		console.log(response);
+		$('#viewName').text(response[0].name.fname + " " + response[0].name.minit + " " + response[0].name.lname);
+		$('#viewWeek').text(response[0].week);
+		$('#viewCamperDiagnosis').text(response[0].camperDiagnosis);
+		$('#viewCamperDiagnosisDate').text(response[0].camperDiagnosisDate);
+		$('#viewCamperPhysician').text(response[0].camperPhysician.name + ", " + response[0].camperPhysician.phone);
+		$('#viewCamperTreatmentLocation').text(response[0].camperTreatmentLocation);
+		$('#viewDiagnosisControlled').text(response[0].controlled);
+		$('#viewAddress').text(response[0].homeAddr.street);
+		$('#viewCity').text(response[0].homeAddr.city + ", " + response[0].homeAddr.state);
+		$('#viewZip').text(response[0].homeAddr.zip);
+		$('#viewSibOrParentName').text(response[0].sibOrParentName);
+		$('#viewSibOrParentDiagnosis').text(response[0].sibOrParentDiagnosis);
+		$('#viewSibOrParentDiagnosisDate').text(response[0].sibOrParentDiagnosisDate);
+		$('#viewSibOrParentPhysician').text(response[0].sibOrParentPhysician.name + ", " + response[0].sibOrParentPhysician.phone);
+		$('#viewSibOrParentTreatmentLocation').text(response[0].sibOrParentTreatmentLocation);
+		$('#viewSchool').text(response[0].schoolYear);
+		$('#viewShirtSize').text(response[0].shirtSize);
+		$('#viewCanSwim').text(response[0].canSwim);
+		$('#viewPrevCamper').text(response[0].previousCamper);
+		$('#viewPrevOvernightCamper').text(response[0].previousOvernightCamper);
+		$('#viewResidence').text(response[0].residence);
+		$('#viewNickName').text(response[0].nickName);
+		$('#viewTalent').text(response[0].talents);
+		$('#viewMostAnticipated').text(response[0].mostAnticipated);
+		$('#viewHobbies').text(response[0].hobbies);
+		$('#viewFavoriteSubject').text(response[0].favSubject);
+		$('#viewFavoriteSport').text(response[0].favSport);
+		$('#viewCanMakeFriends').text(response[0].canMakeFriends);
+		$('#viewAdditionalNotes').text(response[0].notes);
+		$('#viewTable').css('display', 'inline');
+	});
 }
 
 
@@ -148,6 +178,16 @@ async function findCampersByEmail(eml) {
 async function removeCamperByID(id) {
 	try {
 		const response = await axios.delete('http://localhost:3013/rest/camper/id/' + id);
+		return response.data;
+	}catch (err) {
+		console.log("Can not connect to server.");
+		console.log(err);
+	}
+}
+//Find a Camper by ID
+async function findCamperByID(id){
+	try {
+		const response = await axios.get('http://localhost:3013/rest/camper/id/' + id);
 		return response.data;
 	}catch (err) {
 		console.log("Can not connect to server.");
