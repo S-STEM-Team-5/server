@@ -94,7 +94,6 @@ function initSubmitButtons() {
 				$('#rErrorMessage').text("");
 				$('#rErrorMessage').css('display', 'none');
 				const response = postRequestRegister().then((response) => {
-					console.log(response.status);
 					if (response.status == 200) {
 						$('#rErrorMessage').text("Account already exists");
 						$('#rErrorMessage').css('display', 'inline').css('color', 'red');

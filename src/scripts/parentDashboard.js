@@ -107,7 +107,7 @@ function addRowToTable(name, status, week, id){
 				button2.addEventListener('click', () => {
 					$('#viewTable').css('display', 'none');
 					$('#removeYesButton').attr('value', id);
-					$('#applicationMessage').text("Are you sure you want to remove _____'s application?");
+					$('#applicationMessage').text("Are you sure you want to remove "+ name +"'s application?");
 					$('.smallButtons').css('display', 'inline');
 				});
 		td5.appendChild(button2);
