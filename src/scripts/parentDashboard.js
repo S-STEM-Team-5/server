@@ -3,14 +3,14 @@ function main() {
 	initApplicationButtons();
 	initTable();
 }
+let eml = localStorage["email"];
 main();
 
 function initWelcome(){
-	//TODO: Get Name
-
-	let dataName = "Ethan";
-
-	$('#welcome').text("Welcome " + dataName +"!");
+	//Changes Welcome sign
+	findUserByEmail(eml).then((response) => {
+		$('#welcome').text("Welcome " + response.name.fname +"!");
+	});
 }
 
 function initApplicationButtons(){
@@ -91,4 +91,37 @@ function initTable(){
 	}
 
 	
+}
+
+
+//--------------------------------------------------- API Calls -------------------------------------------------------------
+//Find by email
+async function findUserByEmail(eml) {
+	try {
+		const response = await axios.get('http://localhost:3013/rest/account/' + eml);
+		return response.data;
+	}catch (err) {
+		console.log("Can not connect to server.");
+		console.log(err);
+	}
+}
+//Find if there is camper(s) with that email.
+async function findVolunteerByEmail(eml) {
+	try {
+		const response = await axios.get('http://localhost:3013/rest/camper/' + eml);
+		return response.data;
+	}catch (err) {
+		console.log("Can not connect to server.");
+		console.log(err);
+	}
+}
+//Removes a camper by ID
+async function removeCamperByID(id) {
+	try {
+		const response = await axios.delete('http://localhost:3013/rest/camper/' + id);
+		return response.data;
+	}catch (err) {
+		console.log("Can not connect to server.");
+		console.log(err);
+	}
 }
