@@ -1,0 +1,47 @@
+{
+"guardianEmail": "hillbj1@appstate.edu",
+    "name": {
+      "fname": "Bryan",
+      "lname": "Hill",
+      "minit": "J"
+    },
+    "homeAddr": {
+      "street": "3312 Annry Dr.",
+      "city": "Summerfield",
+      "state": "NC",
+      "zip": 27358
+    },
+    "residence": "Home",
+    "shirtSize": "Large",
+    "week": "Well Week",
+    "previousCamper": false,
+    "previousOvernightCamper": false,
+    "canMakeFriends": false,
+    "sibOrParentName": "Mommy",
+    "sibOrParentDiagnosis": "That stick",
+    "sibOrParentDiagnosisDate": "0000/000/000",
+    "sibOrParentTreatmentLocation": "They Keys",
+    "sibOrParentPhysician": {
+      "name": "Josh",
+      "phone": 7777777777
+    },
+    "camperDiagnosis": "Too Cool",
+    "camperDiagnosisDate": "Birth",
+    "camperTreatmentLocation": "Anywhere anytime",
+    "camperPhysician": {
+      "name": "Rich",
+      "phone": 3367071393
+    },
+    "controlled": false,
+    "nickName": "that dude",
+    "schoolYear": "winner",
+    "favSubject": "cash",
+    "hobbies": "yes",
+    "talents": "all",
+    "favSport": "good @ everything",
+    "canSwim": true,
+    "mostAnticipated": "me",
+    "notes": "can't be controlled",
+    "applicationBy": true,
+    "status": "Accepted"
+}

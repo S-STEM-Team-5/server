@@ -1,0 +1,9 @@
+{
+    "accType" : "Bryan Hill",
+    "email" : "hillbj1@appstate.edu",
+    "password" : "password",
+    "name": {
+        "fname" : "Bryan",
+        "lname" : "hill"
+    }
+}
