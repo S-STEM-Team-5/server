@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
+const fetch = require("node-fetch");
 
 //Creating DB connection and logging
 mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
@@ -28,3 +29,9 @@ app.use('/rest/volunteer', volunteerRoute);
 
 //Creating server on port 3000.
 app.listen(3013, () => console.log('Server Started'));
+getIPFromAmazon();
+
+
+async function getIPFromAmazon() {
+  await fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => console.log('Server listening at: ' + data))
+}
