@@ -173,22 +173,22 @@
 			<legend> Weeks </legend>
 			<label for="weeks"> Check session camper qualifies for: </label>
 			<br /><br />
-			<input type="checkbox" name="weeks" id="session1" value="1" required="required" />
+			<input type="checkbox" name="weeks" id="session1" value="1"/>
 			<label for="session1"> SIBLINGS - Well childern with a chronically ill sibling </label>
 			<br />
-			<input type="checkbox" name="weeks" id="session2" value="2" required="required"/>
+			<input type="checkbox" name="weeks" id="session2" value="2"/>
 			<label for="session2"> NEURO - epilepsy &amp; neurological disorders </label>
 			<br />
-			<input type="checkbox" name="weeks" id="session3" value="3" required="required"/>
+			<input type="checkbox" name="weeks" id="session3" value="3"/>
 			<label for="session3"> CANCER - leukemia &amp; other cancers, JRA </label>
 			<br />
-			<input type="checkbox" name="weeks" id="session4" value="4" required="required" />
+			<input type="checkbox" name="weeks" id="session4" value="4"/>
 			<label for="session4"> SPINA BIFDA - spina cord disorders &amp; injuries </label>
 			<br />
-			<input type="checkbox" name="weeks" id="session5" value="5" required="required"/>
+			<input type="checkbox" name="weeks" id="session5" value="5"/>
 			<label for="session5"> KIDS - well childern with a chronically ill parent</label>
 			<br />
-			<input type="checkbox" name="weeks" id="session6" value="6" required="required"/>
+			<input type="checkbox" name="weeks" id="session6" value="6"/>
 			<label for="session6"> HEMOPHILIA - blood disorders, Von Willebrand &amp; Turner's </label>
 			<br />			
 		</fieldset>
@@ -311,11 +311,8 @@
 		<!---------------------------------->
 		<fieldset id="medicalField">
 			<legend>Medical Information</legend>
-			<ul>
-				<li>Option 1: Continue Medical Forum on here.</li>
-				<li>Option 2: Ignore Medical information. Have campers continue to mail this portion.</li>
-				<li>Option 3: Try to incorporate DocUsign.</li>
-			</ul>
+			<p>Please download and fill out this medical forum: <a href="../media/MedicalForum.pdf" target="_blank">Medical Forum</a></p>
+			<input type="file" accept="image/*,.pdf">
 		</fieldset>
 		<input id="submitButton" type="submit" name="Send Message" class="clickableButton"/>
 </body>
