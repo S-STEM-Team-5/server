@@ -60,6 +60,8 @@ form{
   'back back back back back'
   'cert cert cert cert cert'
   'sign sign sign sign sign'
+  'ref1 ref1 none ref2 ref2'
+  'med med med med med'
   'sub sub sub sub sub';
   grid-gap: 10px;
 }
@@ -97,7 +99,15 @@ fieldset{
 #signatureField{
 	grid-area: sign;
 }
-
+#referencesField1{
+	grid-area: ref1;
+}
+#referencesField2{
+	grid-area: ref2;
+}
+#medicalField{
+	grid-area: med;
+}
 legend {
 	font-size: 32px;
 	font-weight: bold;
