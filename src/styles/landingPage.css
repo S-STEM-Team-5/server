@@ -60,26 +60,17 @@ legend {
 	font-size: 18px;
 	text-align: left;
 }
-#prompt{
-	font-size: 32px;
-}
-#signIn {
-	display: none;
-}
 #register {
 	display: none;
 }
-.backButton, .submitButton{
+.submitButton {
+	float: right;
 	font-size: 24px;
 	color: white;
-	text-shadow: 1px 1px 1px black;
 	padding: 10px 60px 10px 60px;
 	margin: 24px 5px 24px 5px;
 }
-.submitButton {
-	float: right;
-}
-.backButton {
+.backButton, #RegisterButton {
 	float: left;
 	font-size: 22px;
 	padding: 10px 10px 10px 10px;

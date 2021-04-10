@@ -43,6 +43,11 @@ button {
 	font-family: RalewayThin;
 	font-weight: bold;
 }
+.userToolButton {
+	font-size: 16px;
+	padding: 5px 10px 5px 10px;
+	margin: 1em 5px 1em 5px;
+}
 .smallButtons {
 	font-size: 16px;
 	display: none;
@@ -66,12 +71,12 @@ hr {
 }
 table {
 	margin: 0 auto;
-	border: 2px solid gray;
-	border-spacing: 2px;
+	border: 0px solid gray;
+	border-spacing: 0px;
 }
-td {
-	border: 2px solid gray;
-	padding: 0px 15px 0px 15px;
+th {
+	border: 1px solid gray;
+	padding: 0px 25px 0px 25px;
 }
 .removeApplicationButton, .viewApplicationButton {
 	font-size: 18px;

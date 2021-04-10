@@ -18,24 +18,27 @@ function initPromptButtons() {
 
 	//Sign-In
 	$('#SignInButton').on('click', function() {
-		$('#prompt').css('display', 'none');
 		$('#register').css('display', 'none');
 		$('#signIn').css('display', 'inline');
 	});
 	//Register
 	$('#RegisterButton').on('click', function() {
-		$('#prompt').css('display', 'none');
 		$('#register').css('display', 'inline');
 		$('#signIn').css('display', 'none');
 	});
 	//GoBack
 	$('.backButton').on('click', function() {
-		$('#prompt').css('display', 'inline');
 		$('#register').css('display', 'none');
-		$('#signIn').css('display', 'none');
+		$('#signIn').css('display', 'inline');
 		resetErrorMessages();
 		clearAllInputs()
 	});
+	document.getElementById("sPassword").oninput = function() {
+		resetErrorMessages();
+	};
+	document.getElementById("sEmail").oninput = function() {
+		resetErrorMessages();
+	};
 }
 function resetErrorMessages(){
 	$('#rErrorMessage, #sErrorMessage').css('display','none').text("");
