@@ -45,7 +45,8 @@ router.post('/', async (req, res) => {
     gname: req.body.gname,
     grelation: req.body.grelation,
     gsignature: req.body.grelation,
-    status: req.body.status
+    status: req.body.status,
+    file: req.body.file::
   });
   try {
     const newVolunteer = await volunteer.save();

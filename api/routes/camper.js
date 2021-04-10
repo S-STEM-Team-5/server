@@ -71,7 +71,8 @@ router.post('/', async (req, res) => {
     mostAnticipated: req.body.mostAnticipated,
     notes: req.body.notes,
     applicationBy: req.body.applicationBy,
-    status: req.body.status
+    status: req.body.status,
+    file: req.body.file
   });
   try {
     const newCamper = await camper.save();
