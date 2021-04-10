@@ -142,6 +142,9 @@ const camperSchema = new mongoose.Schema({
   },
   status: {
     type: String
+  },
+  file:  {
+    type: String
   }
 });
 
