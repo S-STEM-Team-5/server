@@ -18,17 +18,13 @@ body {
     line-height: 1.6em;
 }
 #submitButton {
-	background-color: rgb(185, 185, 185);
-	border: 2px solid white;
-	border-radius: 10px;
-	box-shadow: 2px 2px 2px black;
-	padding: 10px 20px 10px 20px;
+	background-color: #272727;
+	padding: 10px 60px 10px 60px;
 	margin: 1em 5px 1em 5px;
-	font-size: 22px;
+	font-size: 48px;
 	color: white;
 	font-family: RalewayThin;
 	font-weight: bold;
-	text-shadow: 2px 2px 2px black;
 }
 #volH1{
 	background: gray url("../media/staff.png") no-repeat center;
@@ -68,7 +64,7 @@ form{
   grid-gap: 10px;
 }
 fieldset{
-	background-color: rgb(220, 220, 220);
+	background-color: white;
 }
 #logoFig{
 	grid-area: right;
@@ -105,9 +101,7 @@ fieldset{
 legend {
 	font-size: 32px;
 	font-weight: bold;
-	background-color: rgb(220, 220, 220);
 	padding: 3px 3px 3px 3px;
-	border: 2px solid threedface;
 }
 input {
 	margin: 2px;

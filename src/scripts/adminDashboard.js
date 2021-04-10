@@ -14,10 +14,12 @@ function initWelcome(){
 }
 
 function initTableButtons(){
-	$('button').on('mouseover', function(){
+	$('button').on('mouseover', function() {
 		$(this).css('cursor', 'pointer');
-	}).on('mouseout', function(){
+		$(this).css('background-color', 'rgb(73, 73, 73)');
+	}).on('mouseout', function() {
 		$(this).css('cursor', 'default');
+		$(this).css('background-color', '#272727');
 	});
 
 
