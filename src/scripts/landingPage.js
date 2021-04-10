@@ -33,6 +33,9 @@ function initPromptButtons() {
 		resetErrorMessages();
 		clearAllInputs()
 	});
+	document.getElementById("sPassword").oninput = function() {
+		resetErrorMessages();
+	};
 }
 function resetErrorMessages(){
 	$('#rErrorMessage, #sErrorMessage').css('display','none').text("");

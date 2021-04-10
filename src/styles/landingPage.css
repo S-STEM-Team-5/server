@@ -63,14 +63,12 @@ legend {
 #register {
 	display: none;
 }
-.backButton, .submitButton {
+.submitButton {
+	float: right;
 	font-size: 24px;
 	color: white;
 	padding: 10px 60px 10px 60px;
 	margin: 24px 5px 24px 5px;
-}
-.submitButton {
-	float: right;
 }
 .backButton, #RegisterButton {
 	float: left;
