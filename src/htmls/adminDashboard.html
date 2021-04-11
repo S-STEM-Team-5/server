@@ -6,6 +6,8 @@
 	<script defer src='../scripts/jquery-3.5.1.min.js'></script>
 	<script defer src='../scripts/nav.js'></script>
 	<script defer src='../scripts/adminDashboard.js'></script>
+	<script defer src='../scripts/DataTables/datatables.min.js'></script>
+	<link href="../scripts/DataTables/datatables.min.css" type="text/css" rel="stylesheet"/>
 	<link href="../styles/adminDashboard.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
@@ -28,69 +30,77 @@
 			<button class="smallButtons" id="removeNoButton"> No </button>
 			<!-- Table -->
 			<table id="camperTable">
-				<tr>
-					<th scope="col"><p class="CamperName"> Name </p></th>
-					<th scope="col"><p class="CamperAge"> Age </p></th>
-					<th scope="col"><p class="approvalStatus"> Status</p></th>
-					<th scope="col"><p class="weekToGo"> Week </p></th>
-					<th scope="col"> View Entry </th>
-					<th scope="col"> Remove Entry </th>
-				</tr>
-				<tr>
-					<td><p class="CamperName"> Unavailable </p></td>
-					<td><p class="CamperAge"> Unavailable </p></td>
-					<td><p class="approvalStatus"> 
-						<select name="CamperStatus" id="CamperStatus" class="updateInfo">
+				<thead>
+					<tr>
+						<th scope="col"><p class="CamperName"> Name </p></th>
+						<th scope="col"><p class="CamperAge"> Age </p></th>
+						<th scope="col"><p class="approvalStatus"> Status</p></th>
+						<th scope="col"><p class="weekToGo"> Week </p></th>
+						<th scope="col"> View Entry </th>
+						<th scope="col"> Remove Entry </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><p class="CamperName"> Unavailable </p></td>
+						<td><p class="CamperAge"> Unavailable </p></td>
+						<td><p class="approvalStatus"> 
+							<select name="CamperStatus" id="CamperStatus" class="updateInfo">
+								<option value="Unselected">Unselected</option>
+								<option value="Accepted">Accepted</option>
+								<option value="Rejected">Rejected</option>
+							</select>
+						</p></td>
+						<td><p class="weekToGo">
+							<select name="CamperWeek" id="CamperWeek" class="updateInfo">
+								<option value="Unselected">Unselected</option>
+								<option value="Accepted">SIBLINGS</option>
+								<option value="Rejected">NEURO</option>
+								<option value="Rejected">CANCER</option>
+								<option value="Rejected">SPINA BIFIDA</option>
+								<option value="Rejected">KIDS</option>
+								<option value="Rejected">HEMOPHILIA</option>
+							</select>	
+						</p></td>
+						<td><button class="viewEntryButton userToolButton"> Open PDF </button></td>
+						<td><button class="removeEntryButton userToolButton"> Remove Entry </button></td>
+					</tr>
+				</tbody>
+			</table>
+			<table id="counselorTable" class="sortable">
+				<thead>
+					<tr>
+						<th scope="col"><p class="CounselorName"> Name </p></th>
+						<th scope="col"><p class="CounselorAge"> Age </p></th>
+						<th scope="col"><p class="PrevWorked"> Prev. Worked </p></th>
+						<th scope="col"><p class="HasCar"> Has Car </p></th>
+						<th scope="col"><p class="approvalStatus"> Status</p></th>
+						<th scope="col"><p class="weeksToWork"> Weeks </p></th>
+						<th scope="col"> View Entry </th>
+						<th scope="col"> Remove Entry </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><p class="CounselorName"> Ethan Little </p></td>
+						<td><p class="CounselorAge"> 20 </p></td>
+						<td><p class="PrevWorked"> Yes </p></td>
+						<td><p class="HasCar"> Yes </p></td>
+						<td><p class="approvalStatus"> 
+							<select name="VolStatus" id="VolStatus" class="updateInfo">
 							<option value="Unselected">Unselected</option>
 							<option value="Accepted">Accepted</option>
 							<option value="Rejected">Rejected</option>
-						</select>
-					</p></td>
-					<td><p class="weekToGo">
-						<select name="CamperWeek" id="CamperWeek" class="updateInfo">
-							<option value="Unselected">Unselected</option>
-							<option value="Accepted">SIBLINGS</option>
-							<option value="Rejected">NEURO</option>
-							<option value="Rejected">CANCER</option>
-							<option value="Rejected">SPINA BIFIDA</option>
-							<option value="Rejected">KIDS</option>
-							<option value="Rejected">HEMOPHILIA</option>
-						</select>	
-					</p></td>
-					<td><button class="viewEntryButton userToolButton"> Open PDF </button></td>
-					<td><button class="removeEntryButton userToolButton"> Remove Entry </button></td>
-				</tr>
-			</table>
-			<table id="counselorTable" class="sortable">
-				<tr>
-					<th scope="col"><p class="CounselorName"> Name </p></th>
-					<th scope="col"><p class="CounselorAge"> Age </p></th>
-					<th scope="col"><p class="PrevWorked"> Prev. Worked </p></th>
-					<th scope="col"><p class="HasCar"> Has Car </p></th>
-					<th scope="col"><p class="approvalStatus"> Status</p></th>
-					<th scope="col"><p class="weeksToWork"> Weeks </p></th>
-					<th scope="col"> View Entry </th>
-					<th scope="col"> Remove Entry </th>
-				</tr>
-				<tr>
-					<td><p class="CounselorName"> Ethan Little </p></td>
-					<td><p class="CounselorAge"> 20 </p></td>
-					<td><p class="PrevWorked"> Yes </p></td>
-					<td><p class="HasCar"> Yes </p></td>
-					<td><p class="approvalStatus"> 
-						<select name="VolStatus" id="VolStatus" class="updateInfo">
-						  <option value="Unselected">Unselected</option>
-						  <option value="Accepted">Accepted</option>
-						  <option value="Rejected">Rejected</option>
-						</select>
-					</p></td>
-					<td><p class="weeksToWork">
-						<input id="weeksToWork" placeholder="Not Assigned" size="15" class="updateInfo">
-						</input>
-					</p></td>
-					<td><button class="viewEntryButton userToolButton"> Open PDF </button></td>
-					<td><button class="removeEntryButton userToolButton"> Remove Entry </button></td>
-				</tr>
+							</select>
+						</p></td>
+						<td><p class="weeksToWork">
+							<input id="weeksToWork" placeholder="Not Assigned" size="15" class="updateInfo">
+							</input>
+						</p></td>
+						<td><button class="viewEntryButton userToolButton"> Open PDF </button></td>
+						<td><button class="removeEntryButton userToolButton"> Remove Entry </button></td>
+					</tr>
+				</tbody>
 			</table>
 		</div>
 	</article>

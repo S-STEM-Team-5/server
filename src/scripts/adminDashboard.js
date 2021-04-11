@@ -1,10 +1,20 @@
 function main() {
+	dataTables();
 	initWelcome();
 	initTableButtons();
 	initTable();
 	updateInfo();
 }
 main();
+
+function dataTables(){
+	$(document).ready( function () {
+		$('#camperTable').DataTable();
+	} );
+	$(document).ready( function () {
+		$('#counselorTable').DataTable();
+	} );
+}
 
 function updateInfo(){
 	//TODO: Update Database with new input data.
