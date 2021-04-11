@@ -73,10 +73,14 @@ table {
 	margin: 0 auto;
 	border: 0px solid gray;
 	border-spacing: 0px;
+	max-width: 1500px;
 }
 th {
 	border: 1px solid gray;
-	padding: 0px 25px 0px 25px;
+	padding: 0px 15px 0px 15px;
+}
+td {
+	padding: 0px 10px 0px 10px;
 }
 .removeApplicationButton, .viewApplicationButton {
 	font-size: 18px;
@@ -84,4 +88,14 @@ th {
 }
 #applicationMessage {
 	color: red;
+}
+select {
+	border: none;
+	font-family: Raleway;
+	font-size: 16px;
+}
+#weeksToWork{
+	border: none;
+	font-family: Raleway;
+	font-size: 17px;
 }

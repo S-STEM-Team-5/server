@@ -2,8 +2,13 @@ function main() {
 	initWelcome();
 	initTableButtons();
 	initTable();
+	updateInfo();
 }
 main();
+
+function updateInfo(){
+	//TODO: Update Database with new input data.
+}
 
 function initWelcome(){
 	//TODO: Get Name
