@@ -43,5 +43,6 @@
     "mostAnticipated": "me",
     "notes": "can't be controlled",
     "applicationBy": true,
-    "status": "Accepted"
+    "status": "Accepted",
+    "file" : "test"
 }
