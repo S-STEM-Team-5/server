@@ -38,19 +38,19 @@ function initTableButtons(){
 		$(this).css('background-color', '#272727');
 	});
 	//Table button actualling switching tables.
-	$('#camperTable_wrapper').focus();
-	$('#counselorTable_wrapper').css('display', 'none');
+	$('#camperDatabase').focus();
+	$('#counselorDatabase').css('display', 'none');
 	$('#camperTableButton').css('box-shadow', '0px 5px red');
 	$('#camperTableButton').on('click', function(){
-		$('#counselorTable_wrapper').css('display', 'none');
-		$('#camperTable_wrapper').css('display', 'inline-block');
+		$('#counselorDatabase').css('display', 'none');
+		$('#camperDatabase').css('display', 'inline-block');
 		$(this).css('box-shadow', '0px 5px red');
 		$(this).focus();
 		$('#counselorTableButton').css('box-shadow', '0px 0px red');
 	});
 	$('#counselorTableButton').on('click', function(){
-		$('#counselorTable_wrapper').css('display', 'inline-block');
-		$('#camperTable_wrapper').css('display', 'none');
+		$('#counselorDatabase').css('display', 'inline-block');
+		$('#camperDatabase').css('display', 'none');
 		$(this).css('box-shadow', '0px 5px red');
 		$(this).focus();
 		$('#camperTableButton').css('box-shadow', '0px 0px red');

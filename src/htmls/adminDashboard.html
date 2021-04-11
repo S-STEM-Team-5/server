@@ -28,80 +28,109 @@
 			<p id="applicationMessage"></p>
 			<button class="smallButtons" id="removeYesButton"> Yes </button>
 			<button class="smallButtons" id="removeNoButton"> No </button>
-			<!-- Table -->
-			<table id="camperTable">
-				<thead>
-					<tr>
-						<th scope="col"><p class="CamperName"> Name </p></th>
-						<th scope="col"><p class="CamperAge"> Age </p></th>
-						<th scope="col"><p class="approvalStatus"> Status</p></th>
-						<th scope="col"><p class="weekToGo"> Week </p></th>
-						<th scope="col"> View Entry </th>
-						<th scope="col"> Remove Entry </th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><p class="CamperName"> Unavailable </p></td>
-						<td><p class="CamperAge"> Unavailable </p></td>
-						<td><p class="approvalStatus"> 
-							<select name="CamperStatus" id="CamperStatus" class="updateInfo">
+			<!--------------------->
+			<!-- Camper Database -->
+			<!--------------------->
+			<div id="camperDatabase">
+				<button id="addNewCamper" class="databaseToolButton"> Add Camper </button>
+				<label for="camperFilterWeek">Filter Week: </label>
+				<select name="camperFilterWeek" id="camperFilterWeek" class="updateInfo">
+					<option value="Unselected">Unselected</option>
+					<option value="Accepted">SIBLINGS</option>
+					<option value="Rejected">NEURO</option>
+					<option value="Rejected">CANCER</option>
+					<option value="Rejected">SPINA BIFIDA</option>
+					<option value="Rejected">KIDS</option>
+					<option value="Rejected">HEMOPHILIA</option>
+				</select>
+				<table id="camperTable">
+					<thead>
+						<tr>
+							<th scope="col"><p class="CamperName"> Name </p></th>
+							<th scope="col"><p class="CamperAge"> Age </p></th>
+							<th scope="col"><p class="approvalStatus"> Status </p></th>
+							<th scope="col"><p class="weekToGo"> Week </p></th>
+							<th scope="col"><p class="T-Shirt"> T-Shirt </p></th>
+							<th scope="col"><p class="homePhone"> Home Phone </p></th>
+							<th scope="col"> View Entry </th>
+							<th scope="col"> Remove Entry </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><p class="CamperName"> Unavailable </p></td>
+							<td><p class="CamperAge"> Unavailable </p></td>
+							<td><p class="approvalStatus"> 
+								<select name="CamperStatus" id="CamperStatus" class="updateInfo">
+									<option value="Unselected">Unselected</option>
+									<option value="Accepted">Accepted</option>
+									<option value="Rejected">Rejected</option>
+								</select>
+							</p></td>
+							<td><p class="weekToGo">
+								<select name="CamperWeek" id="CamperWeek" class="updateInfo">
+									<option value="Unselected">Unselected</option>
+									<option value="Accepted">SIBLINGS</option>
+									<option value="Rejected">NEURO</option>
+									<option value="Rejected">CANCER</option>
+									<option value="Rejected">SPINA BIFIDA</option>
+									<option value="Rejected">KIDS</option>
+									<option value="Rejected">HEMOPHILIA</option>
+								</select>	
+							</p></td>
+							<td><p class="T-shirt"> Unavailable </p></td>
+							<td><p class="homePhone"> (000) 000 - 0000 </p></td>
+							<td><button class="viewEntryButton userToolButton"> Open PDF </button></td>
+							<td><button class="removeEntryButton userToolButton"> Remove Entry </button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!------------------------>
+			<!-- Counselor Database -->
+			<!------------------------>
+			<div id="counselorDatabase">
+				<button id="addNewCounselor" class="databaseToolButton"> Add Counselor </button>
+				<table id="counselorTable" class="sortable">
+					<thead>
+						<tr>
+							<th scope="col"><p class="CounselorName"> Name </p></th>
+							<th scope="col"><p class="CounselorAge"> Age </p></th>
+							<th scope="col"><p class="PrevWorked"> Prev. Worked </p></th>
+							<th scope="col"><p class="HasCar"> Has Car </p></th>
+							<th scope="col"><p class="approvalStatus"> Status</p></th>
+							<th scope="col"><p class="weeksToWork"> Weeks </p></th>
+							<th scope="col"><p class="T-Shirt"> T-Shirt </p></th>
+							<th scope="col"><p class="homePhone"> Home Phone </p></th>
+							<th scope="col"> View Entry </th>
+							<th scope="col"> Remove Entry </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><p class="CounselorName"> Ethan Little </p></td>
+							<td><p class="CounselorAge"> 20 </p></td>
+							<td><p class="PrevWorked"> Yes </p></td>
+							<td><p class="HasCar"> Yes </p></td>
+							<td><p class="approvalStatus"> 
+								<select name="VolStatus" id="VolStatus" class="updateInfo">
 								<option value="Unselected">Unselected</option>
 								<option value="Accepted">Accepted</option>
 								<option value="Rejected">Rejected</option>
-							</select>
-						</p></td>
-						<td><p class="weekToGo">
-							<select name="CamperWeek" id="CamperWeek" class="updateInfo">
-								<option value="Unselected">Unselected</option>
-								<option value="Accepted">SIBLINGS</option>
-								<option value="Rejected">NEURO</option>
-								<option value="Rejected">CANCER</option>
-								<option value="Rejected">SPINA BIFIDA</option>
-								<option value="Rejected">KIDS</option>
-								<option value="Rejected">HEMOPHILIA</option>
-							</select>	
-						</p></td>
-						<td><button class="viewEntryButton userToolButton"> Open PDF </button></td>
-						<td><button class="removeEntryButton userToolButton"> Remove Entry </button></td>
-					</tr>
-				</tbody>
-			</table>
-			<table id="counselorTable" class="sortable">
-				<thead>
-					<tr>
-						<th scope="col"><p class="CounselorName"> Name </p></th>
-						<th scope="col"><p class="CounselorAge"> Age </p></th>
-						<th scope="col"><p class="PrevWorked"> Prev. Worked </p></th>
-						<th scope="col"><p class="HasCar"> Has Car </p></th>
-						<th scope="col"><p class="approvalStatus"> Status</p></th>
-						<th scope="col"><p class="weeksToWork"> Weeks </p></th>
-						<th scope="col"> View Entry </th>
-						<th scope="col"> Remove Entry </th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><p class="CounselorName"> Ethan Little </p></td>
-						<td><p class="CounselorAge"> 20 </p></td>
-						<td><p class="PrevWorked"> Yes </p></td>
-						<td><p class="HasCar"> Yes </p></td>
-						<td><p class="approvalStatus"> 
-							<select name="VolStatus" id="VolStatus" class="updateInfo">
-							<option value="Unselected">Unselected</option>
-							<option value="Accepted">Accepted</option>
-							<option value="Rejected">Rejected</option>
-							</select>
-						</p></td>
-						<td><p class="weeksToWork">
-							<input id="weeksToWork" placeholder="Not Assigned" size="15" class="updateInfo">
-							</input>
-						</p></td>
-						<td><button class="viewEntryButton userToolButton"> Open PDF </button></td>
-						<td><button class="removeEntryButton userToolButton"> Remove Entry </button></td>
-					</tr>
-				</tbody>
-			</table>
+								</select>
+							</p></td>
+							<td><p class="weeksToWork">
+								<input id="weeksToWork" placeholder="Not Assigned" size="15" class="updateInfo">
+								</input>
+							</p></td>
+							<td><p class="T-Shirt"> Large </p></th>
+							<td><p class="homePhone"> (336) 999 - 9999 </p></th>
+							<td><button class="viewEntryButton userToolButton"> Open PDF </button></td>
+							<td><button class="removeEntryButton userToolButton"> Remove Entry </button></td>
+						</tr>
+					</tbody>
+				</table>	
+			</div>
 		</div>
 	</article>
 </body>
