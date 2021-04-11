@@ -59,7 +59,8 @@ h2 {
 article {
 	text-align: center;
 	margin: 0 auto;
-	border: 1px solid gray;
+	max-width: 1600px;
+    border: 1px solid gray;
 	padding: 5px 5px 200px 5px;
 	margin-bottom: 200px;
 }
@@ -71,9 +72,9 @@ hr {
 }
 table {
 	margin: 0 auto;
-	border: 0px solid gray;
 	border-spacing: 0px;
 	max-width: 1500px;
+	padding: 5px;
 }
 th {
 	border: 1px solid gray;
@@ -98,4 +99,19 @@ select {
 	border: none;
 	font-family: Raleway;
 	font-size: 17px;
+}
+
+/* Data Table */
+#counselorTable_wrapper{
+	display: none;
+	text-align: center;
+	margin: 0 auto;
+	padding: 20px;
+	width: 95%;
+}
+#camperTable_wrapper{
+	text-align: center;
+	margin: 0 auto;
+	padding: 20px;
+	width: 95%;
 }
