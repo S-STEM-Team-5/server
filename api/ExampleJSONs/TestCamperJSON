@@ -1,5 +1,5 @@
 {
-"guardianEmail": "hillbj1@appstate.edu",
+"guardianEmail": "hillbj1@app2state.edu",
     "name": {
       "fname": "Bryan",
       "lname": "Hill",
@@ -11,6 +11,8 @@
       "state": "NC",
       "zip": 27358
     },
+    "homePhone" : "3367071393",
+    "age" : 21,
     "residence": "Home",
     "shirtSize": "Large",
     "week": "Well Week",

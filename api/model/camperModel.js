@@ -37,6 +37,12 @@ const camperSchema = new mongoose.Schema({
       required: true
     }
   },
+  homePhone: {
+    type: Number
+  },
+  age: {
+    type: Number
+  },
   residence: {
     type: String,
     required: true
