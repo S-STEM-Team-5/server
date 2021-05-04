@@ -25,7 +25,7 @@ function initApplicationButtons(){
 
 	//New Application
 	$('#newApplicationButton').on('click', function(){
-		window.location.href = "camperApplication1.html";
+		window.location.href = "camperApplication.html";
 	});
 	//Account Settings
 	$('#accountSettingsButton').on('click', function(){

@@ -1,28 +1,17 @@
 function main() {
-	dataTables();
 	initWelcome();
 	initTableButtons();
-	initTable();
+	camperTable();
+	counselorTable();
 	updateInfo();
 }
 main();
-
-function dataTables(){
-	$(document).ready( function () {
-		$('#camperTable').DataTable();
-	} );
-	$(document).ready( function () {
-		$('#counselorTable').DataTable();
-	} );
-}
 
 function updateInfo(){
 	//TODO: Update Database with new input data.
 }
 
 function initWelcome(){
-	//TODO: Get Name
-
 	let dataName = "Admin";
 
 	$('#welcome').text("Welcome " + dataName +"!");
@@ -101,27 +90,75 @@ function initTableButtons(){
 	});
 }
 
-function initTable(){
-	//TODO: Get campers from database
-
-	let Status = $('#approvalStatus');
-	let Weeks = $('#weeksToWork');
-	//TODO: Get Status from Database
-	
-	let dataStatus = "Not Submitted";	//Options: Approved, Pending, Declined, and Not Submitted
-	
-	//Update the status
-	Status.text("Status: " + dataStatus);
-	if(dataStatus == "Approved"){
-		//TODO: Get Weeks from Database
-
-		let dataWeeks = "Kids, Siblings";
-
-		Weeks.text("Weeks: " + dataWeeks);
-	}
-	else {
-		Weeks.text("Weeks: Unavailable")
-	}
-
-	
+async function counselorTable(){
+	let counselors = await getAllVolunteers();
+	//Get counselors from database
+	$(document).ready( function () {
+		let counselor_Table = $('#counselorTable').DataTable();
+		counselors.forEach(counselor => {
+			//let Name = counselor.name.fname + " " + counselor.name.lname  || "Unavailable";
+			let age = counselor.birthDate || "Unavailable";
+			let prevWorked = "No";
+			if(counselor.previouslyWorkedAtCamp)
+				prevWorked = "Yes";
+			let hasCar = "No";
+			if(counselor.car)
+				hasCar = "Yes";
+			let status = counselor.status || "Unavailable";
+			let week = counselor.weeks || "Unavailable";
+			let shirt = counselor.shirtSize || "Unavailable";
+			let phone = counselor.homePhone || "Unavailable";
+			console.log(counselor);
+			counselor_Table.row.add(["Name", age, prevWorked, hasCar, status, week, shirt, 0, null, null]).draw();
+		});
+	});
 }
+async function camperTable(){
+	let campers = await getAllCamper();
+	//Get campers from database
+	$(document).ready( function () {
+		let camper_Table = $('#camperTable').DataTable();
+		campers.forEach(camper => {
+			let Name = camper.name.fname + " " + camper.name.lname  || "Unavailable";
+			let Age = camper.age || "Unavailable";
+			let Status = camper.status || "Unavailable";
+			let Week = camper.week || "Unavailable";
+			let Shirt = camper.shirtSize || "Unavailable";
+			let Phone = camper.homePhone || "Unavailable";
+			camper_Table.row.add([Name, Age, Status, Week, Shirt, Phone, null, null]).draw();
+		});
+	});
+}
+
+//--------------------------------------------------- API Calls -------------------------------------------------------------
+//Get all campers
+async function getAllCamper() {
+	try {
+		const response = await axios.get('http://localhost:3013/rest/camper/');
+		return response.data;
+	}catch (err) {
+		console.log("Can not connect to server.");
+		console.log(err);
+	}
+}
+//Get All Volunteers
+async function getAllVolunteers() {
+	try {
+		const response = await axios.get('http://localhost:3013/rest/volunteer/');
+		return response.data;
+	}catch (err) {
+		console.log("Can not connect to server.");
+		console.log(err);
+	}
+}
+// //Removes volunteer by Email
+// async function removeVolunteerByEmail(eml) {
+// 	try {
+// 		const response = await axios.delete('http://localhost:3013/rest/volunteer/' + eml);
+// 		return response.data;
+// 	}catch (err) {
+// 		console.log("Can not connect to server.");
+// 		console.log(err);
+// 	}
+// }
+

@@ -31,7 +31,7 @@ function initApplicationButtons(){
 				$('#applicationMessage').text('You already have an application.');
 			}
 			else{
-				window.location.href = "volApplication1.html";
+				window.location.href = "volunteerApplication.html";
 			}
 		});
 	});
